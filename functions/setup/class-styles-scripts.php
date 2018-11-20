@@ -18,6 +18,7 @@ class Styles_Scripts {
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_styles' ) );
 	}
 
 	/**
@@ -56,6 +57,13 @@ class Styles_Scripts {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+	}
+
+	/**
+	 * Enqueue styles for Gutenberg
+	*/
+	public function block_editor_styles() {
+		wp_enqueue_style( 'pera-block-editor-styles', get_stylesheet_directory_uri() . '/css/block-editor-style.css', false, '1.0', 'all' );
 	}
 
 }
