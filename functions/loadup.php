@@ -11,10 +11,13 @@ $require_paths = array(
 	'/setup/class-styles-scripts.php',
 	'/setup/class-widgets.php',
 
-	'/custom-header/class-custom-header.php',
-	'/post-thumbnail/class-post-thumbnail.php',
 	'/templates/class-templates.php',
-	'/customizer/class-customizer.php'
+	'/customizer/class-customizer.php',
+
+	'/post-thumbnail/class-post-thumbnail.php',
+	'/entry-meta/class-entry-meta.php',
+
+	'/custom-header/class-custom-header.php'
 );
 
 foreach ( $require_paths as $key => $path ) {
@@ -29,4 +32,3 @@ new Pera\Functions\Templates();
 new Pera\Functions\Customizer();
 
 $custom_header = new Pera\Functions\Custom_Header();
-$post_thumbnail = new Pera\Functions\Post_Thumbnail();
