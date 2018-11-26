@@ -6,48 +6,56 @@
  *
  * @package Pera
  */
-
-get_template_part( 'templates/parts/header' );
 ?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+<?php do_action( 'pera/theme_hook/body/prepend' ); ?>
+<div class="container">
+<header class="site-header">
+<?php do_action( 'pera/theme_hook/header' ); ?>
+</header>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<?php do_action( 'pera/theme_hook/navi/global' ); ?>
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'templates/content/archive', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'templates/content/not-found' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+<div class="site-content">
+<div class="primary">
+<div class="content-container">
 <?php
-get_template_part( 'templates/sidebar/sidebar' );
-get_template_part( 'templates/parts/footer' );
+do_action( 'pera/theme_hook/content/prepend' );
+if ( have_posts() ) {
+	do_action( 'pera/theme_hook/content/archive/prepend' );
+	while ( have_posts() ) :
+		the_post();
+		/*
+		* Include the Post-Type-specific template for the content.
+		* If you want to override this in a child theme, then include a file
+		* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+		*/
+		get_template_part( 'templates/content/archive', get_post_type() );
+	endwhile;
+	do_action( 'pera/theme_hook/content/archive/append' );
+}
+else {
+	get_template_part( 'templates/content/not-found' );
+}
+do_action( 'pera/theme_hook/content/append' );
+?>
+</div>
+</div>
+<?php get_template_part( 'templates/sidebar/sidebar' ); ?>
+</div>
+
+<footer class="site-footer">
+<?php
+do_action( 'pera/theme_hook/footer' );
+do_action( 'pera/theme_hook/copyright' );
+?>
+</footer>
+</div>
+<?php wp_footer(); ?>
+</body>
+</html>
