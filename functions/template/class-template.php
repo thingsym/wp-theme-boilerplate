@@ -18,6 +18,7 @@ class Template {
 
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'custom_template_hierarchy' ) );
+		add_action( 'get_search_form', array( $this, 'get_search_form' ) );
 	}
 
 	/**
@@ -58,6 +59,25 @@ class Template {
 				return $custom_templates;
 			} );
 		}
+	}
+
+	/**
+	 * get search_form from templates/parts
+	 *
+	 * @since 1.0.0
+	 */
+	public function get_search_form( $form ) {
+		do_action( 'pre_get_search_form' );
+
+		ob_start();
+		get_template_part( 'templates/parts/search_form' );
+		$form = ob_get_clean();
+
+		if ( empty( $form ) ) {
+			return null;
+		}
+
+		return $form;
 	}
 
 }
