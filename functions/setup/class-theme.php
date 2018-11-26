@@ -19,6 +19,7 @@ class Theme {
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'setup' ) );
 		add_action( 'after_setup_theme', array( $this, 'content_width' ), 0 );
+		add_action( 'wp_head', array( $this, 'print_meta' ), 0 );
 	}
 
 	/**
@@ -127,4 +128,11 @@ class Theme {
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$GLOBALS['content_width'] = apply_filters( $this->hook_prefix . 'content_width', 640 );
 	}
+
+	public function print_meta() {
+		echo '<meta charset="' . get_bloginfo( 'charset' ) . '">' . "\n";
+		echo '<meta name="viewport" content="width=device-width, initial-scale=1">' . "\n";
+		echo '<link rel="profile" href="https://gmpg.org/xfn/11">' . "\n";
+	}
+
 }
