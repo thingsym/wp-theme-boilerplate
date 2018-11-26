@@ -11,7 +11,7 @@ $require_paths = array(
 	'/setup/class-styles-scripts.php',
 	'/setup/class-widgets.php',
 
-	'/templates/class-templates.php',
+	'/templates/class-template.php',
 	'/customizer/class-customizer.php',
 
 	'/post-thumbnail/class-post-thumbnail.php',
@@ -28,7 +28,7 @@ new Pera\Setup\Theme();
 new Pera\Setup\Styles_Scripts();
 new Pera\Setup\Widgets();
 
-new Pera\Functions\Templates();
+new Pera\Functions\Template();
 new Pera\Functions\Customizer();
 
 $custom_header = new Pera\Functions\Custom_Header();

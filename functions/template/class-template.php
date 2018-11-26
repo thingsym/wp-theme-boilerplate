@@ -1,6 +1,6 @@
 <?php
 /**
- * Templates
+ * Template
  *
  * @package Pera
  * @since 1.0.0
@@ -9,11 +9,11 @@
 namespace Pera\Functions;
 
 /**
- * class Templates
+ * class Template
  *
  * @since 1.0.0
  */
-class Templates {
+class Template {
 	protected $templates_dir = 'templates/';
 
 	public function __construct() {
