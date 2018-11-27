@@ -11,7 +11,7 @@ $require_paths = array(
 	'/setup/class-styles-scripts.php',
 	'/setup/class-widgets.php',
 
-	'/templates/class-template.php',
+	'/template/class-template.php',
 	'/customizer/class-customizer.php',
 
 	'/post-thumbnail/class-post-thumbnail.php',
