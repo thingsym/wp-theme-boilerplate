@@ -13,6 +13,7 @@ $require_paths = array(
 
 	'/template/class-template.php',
 	'/customizer/class-customizer.php',
+	'/theme-hooks/class-theme-hooks.php',
 
 	'/post-thumbnail/class-post-thumbnail.php',
 	'/entry-meta/class-entry-meta.php',
@@ -30,5 +31,6 @@ new Pera\Setup\Widgets();
 
 new Pera\Functions\Template();
 new Pera\Functions\Customizer();
+new Pera\Functions\Theme_Hooks();
 
 $custom_header = new Pera\Functions\Custom_Header();
