@@ -36,7 +36,7 @@ do_action( 'pera/theme_hook/content/append' );
 <footer class="site-footer">
 <?php
 do_action( 'pera/theme_hook/footer' );
-do_action( 'pera/theme_hook/copyright' );
+do_action( 'pera/theme_hook/site_info' );
 ?>
 </footer>
 </div>
