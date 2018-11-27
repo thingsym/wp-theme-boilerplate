@@ -17,16 +17,14 @@ class Post_Thumbnail {
 			return;
 		}
 
-		if ( is_singular() ) :
 ?>
-
 <div class="post-thumbnail">
-<?php the_post_thumbnail(); ?>
-</div><!-- .post-thumbnail -->
+<?php
+		if ( is_singular() ) :
+			the_post_thumbnail();
+		else : ?>
 
-		<?php else : ?>
-
-<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 <?php
 			the_post_thumbnail( 'post-thumbnail', array(
 				'alt' => the_title_attribute( array(
@@ -38,6 +36,9 @@ class Post_Thumbnail {
 
 <?php
 		endif; // End is_singular().
+?>
+</div>
+<?php
 	}
 
 }
