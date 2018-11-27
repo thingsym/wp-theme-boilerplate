@@ -12,6 +12,11 @@ class Entry_Meta {
 
 	public function __construct() {}
 
+	public static function entry_header() {
+		self::posted_on();
+		self::posted_by();
+	}
+
 	public static function posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
