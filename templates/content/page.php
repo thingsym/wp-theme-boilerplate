@@ -14,11 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-<?php
-	if ( class_exists( 'Pera\Functions\Post_Thumbnail' ) && method_exists( 'Pera\Functions\Post_Thumbnail', 'post_thumbnail' ) ) {
-		Pera\Functions\Post_Thumbnail::post_thumbnail();
-	}
-?>
+	<?php do_action( 'pera/theme_hook/entry/post_thumbnail' ); ?>
 
 	<div class="entry-content">
 		<?php

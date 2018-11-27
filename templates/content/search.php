@@ -15,33 +15,18 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-<?php
-	if ( class_exists( 'Pera\Functions\Entry_Meta' ) && method_exists( 'Pera\Functions\Entry_Meta', 'posted_on' ) ) {
-		Pera\Functions\Entry_Meta::posted_on();
-	}
-	if ( class_exists( 'Pera\Functions\Entry_Meta' ) && method_exists( 'Pera\Functions\Entry_Meta', 'posted_by' ) ) {
-		Pera\Functions\Entry_Meta::posted_by();
-	}
-?>
+		<?php do_action( 'pera/theme_hook/entry/meta/header' ); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-<?php
-	if ( class_exists( 'Pera\Functions\Post_Thumbnail' ) && method_exists( 'Pera\Functions\Post_Thumbnail', 'post_thumbnail' ) ) {
-		Pera\Functions\Post_Thumbnail::post_thumbnail();
-	}
-?>
+	<?php do_action( 'pera/theme_hook/entry/post_thumbnail' ); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-<?php 
-	if ( class_exists( 'Pera\Functions\Entry_Meta' ) && method_exists( 'Pera\Functions\Entry_Meta', 'entry_footer' ) ) {
-		Pera\Functions\Entry_Meta::entry_footer();
-	}
-?>
+	<?php do_action( 'pera/theme_hook/entry/meta/footer' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
