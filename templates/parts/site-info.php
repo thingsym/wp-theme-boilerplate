@@ -11,14 +11,5 @@
 
 ?>
 <div class="site-info">
-<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">
-<?php
-	/* translators: %s: CMS name, i.e. WordPress. */
-	printf( esc_html__( 'Proudly powered by %s', 'pera' ), 'WordPress' );
-?>
-</a>
-<span class="sep"> | </span>
-<?php echo esc_html__( 'Theme: ', 'pera' ); ?>
-<a href="<?php echo esc_url( 'https://wordpress.org/themes/pera/' ); ?>">Pera</a> by
-<a href="<?php echo esc_url( 'https://github.com/thingsym/' ); ?>">Thingsym</a>
+<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'pera' ), 'WordPress' ); ?></a> <?php echo esc_html__( 'Theme by ', 'pera' ); ?><a href="<?php echo esc_url( 'https://wordpress.org/themes/pera/' ); ?>">Pera</a> Designed by <a href="<?php echo esc_url( 'https://github.com/thingsym/' ); ?>">Thingsym</a>
 </div><!-- .site-info -->
