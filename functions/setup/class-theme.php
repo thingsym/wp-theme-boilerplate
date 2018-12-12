@@ -107,6 +107,12 @@ class Theme {
 			'flex-height' => true,
 		) );
 
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor styles.
+		add_editor_style( 'css/style-editor.min.css' );
+
 		// Adding support for core block visual styles.
 		add_theme_support( 'wp-block-styles' );
 
