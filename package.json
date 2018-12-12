@@ -42,8 +42,8 @@
   ],
   "stylelint": {
     "extends": [
-      "stylelint-scss",
       "stylelint-config-recommended",
+      "stylelint-scss",
       "stylelint-config-recommended-scss"
     ]
   },
