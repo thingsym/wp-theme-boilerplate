@@ -48,6 +48,7 @@
     ]
   },
   "scripts": {
+    "setup": "bash bin/setup.sh",
     "makepot": "php /usr/local/share/wp-i18n/makepot.php wp-theme ../wp-theme-boilerplate ../wp-theme-boilerplate/languages/wp-theme-boilerplate.pot",
     "msgfmt:ja": "msgfmt -o languages/ja.mo languages/ja.po",
     "msgfmt": "run-p \"msgfmt:*\"",
