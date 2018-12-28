@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  */
 
 ?>
@@ -14,14 +14,14 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php do_action( 'pera/theme_hook/entry/post_thumbnail' ); ?>
+	<?php do_action( 'wp_theme_boilerplate/theme_hook/entry/post_thumbnail' ); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content();
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pera' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-theme-boilerplate' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -34,7 +34,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'pera' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'wp-theme-boilerplate' ),
 						array(
 							'span' => array(
 								'class' => array(),

@@ -2,7 +2,7 @@
 /**
  * Load up our theme options, functions and related code.
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  * @since 1.0.0
  */
 
@@ -25,12 +25,12 @@ foreach ( $require_paths as $key => $path ) {
 	require_once( __DIR__ . $path );
 }
 
-new Pera\Setup\Theme();
-new Pera\Setup\Styles_Scripts();
-new Pera\Setup\Widgets();
+new WP_Theme_Boilerplate\Setup\Theme();
+new WP_Theme_Boilerplate\Setup\Styles_Scripts();
+new WP_Theme_Boilerplate\Setup\Widgets();
 
-new Pera\Functions\Template();
-new Pera\Functions\Customizer();
-new Pera\Functions\Theme_Hooks();
+new WP_Theme_Boilerplate\Functions\Template();
+new WP_Theme_Boilerplate\Functions\Customizer();
+new WP_Theme_Boilerplate\Functions\Theme_Hooks();
 
-$custom_header = new Pera\Functions\Custom_Header();
+$custom_header = new WP_Theme_Boilerplate\Functions\Custom_Header();

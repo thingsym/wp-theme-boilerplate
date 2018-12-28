@@ -2,11 +2,11 @@
 /**
  * Widgets
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  * @since 1.0.0
  */
 
-namespace Pera\Setup;
+namespace WP_Theme_Boilerplate\Setup;
 
 /**
  * class Widgets
@@ -29,9 +29,9 @@ class Widgets {
 	public function init() {
 
 		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar', 'pera' ),
+			'name'          => esc_html__( 'Sidebar', 'wp-theme-boilerplate' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'pera' ),
+			'description'   => esc_html__( 'Add widgets here.', 'wp-theme-boilerplate' ),
 			'before_widget' => '<section class="widget %2$s %1$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

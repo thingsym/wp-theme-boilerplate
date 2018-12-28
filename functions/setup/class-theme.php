@@ -2,11 +2,11 @@
 /**
  * theme
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  * @since 1.0.0
  */
 
-namespace Pera\Setup;
+namespace WP_Theme_Boilerplate\Setup;
 
 /**
  * class Theme
@@ -14,7 +14,7 @@ namespace Pera\Setup;
  * @since 1.0.0
  */
 class Theme {
-	protected $hook_prefix = 'pera/functions/setup/';
+	protected $hook_prefix = 'wp_theme_boilerplate/functions/setup/';
 
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'setup' ) );
@@ -35,10 +35,10 @@ class Theme {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Pera, use a find and replace
-		 * to change 'pera' to the name of your theme in all the template files.
+		 * If you're building a theme based on WP Theme Boilerplate, use a find and replace
+		 * to change 'wp-theme-boilerplate' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'pera', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'wp-theme-boilerplate', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -59,7 +59,7 @@ class Theme {
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menu( 'menu-1', esc_html__( 'Primary', 'pera' ) );
+		register_nav_menu( 'menu-1', esc_html__( 'Primary', 'wp-theme-boilerplate' ) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -80,7 +80,7 @@ class Theme {
 		) ) );
 
 		// Set up the WordPress core custom header feature.
-		if ( class_exists( 'Pera\Functions\Custom_Header' ) ) {
+		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Custom_Header' ) ) {
 			global $custom_header;
 			add_theme_support( 'custom-header', apply_filters( $this->hook_prefix . 'custom-header/args', array(
 				'default-image'          => '',

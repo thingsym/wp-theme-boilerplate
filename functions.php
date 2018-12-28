@@ -1,10 +1,10 @@
 <?php
 /**
- * Pera functions and definitions
+ * functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  */
 
 // Load up our theme options, functions and related code.

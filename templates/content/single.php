@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  */
 
 ?>
@@ -21,19 +21,19 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-			<?php do_action( 'pera/theme_hook/entry/meta/header' ); ?>
+			<?php do_action( 'wp_theme_boilerplate/theme_hook/entry/meta/header' ); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php do_action( 'pera/theme_hook/entry/post_thumbnail' ); ?>
+	<?php do_action( 'wp_theme_boilerplate/theme_hook/entry/post_thumbnail' ); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'pera' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wp-theme-boilerplate' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -44,13 +44,13 @@
 		) );
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pera' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-theme-boilerplate' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-	<?php do_action( 'pera/theme_hook/entry/meta/footer' ); ?>
+	<?php do_action( 'wp_theme_boilerplate/theme_hook/entry/meta/footer' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

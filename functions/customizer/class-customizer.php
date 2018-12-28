@@ -2,11 +2,11 @@
 /**
  * Customizer
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  * @since 1.0.0
  */
 
-namespace Pera\Functions;
+namespace WP_Theme_Boilerplate\Functions;
 
 /**
  * class Customizer
@@ -64,7 +64,7 @@ class Customizer {
 
 	public function preview_enqueue_scripts() {
 		wp_enqueue_script(
-			'pera-customizer-preview',
+			'wp-theme-boilerplate-customizer-preview',
 			get_template_directory_uri() . '/js/customizer.min.js',
 			array( 'customize-preview' ),
 			'20151215',

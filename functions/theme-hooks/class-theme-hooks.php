@@ -2,11 +2,11 @@
 /**
  * Theme Hooks
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  * @since 1.0.0
  */
 
-namespace Pera\Functions;
+namespace WP_Theme_Boilerplate\Functions;
 
 /**
  * class Theme_Hooks
@@ -15,23 +15,23 @@ namespace Pera\Functions;
  */
 class Theme_Hooks {
 	public function __construct() {
-		add_action( 'pera/theme_hook/content/index/append', array( $this, 'content_archive_append' ) );
-		add_action( 'pera/theme_hook/content/archive/append', array( $this, 'content_archive_append' ) );
-		add_action( 'pera/theme_hook/content/search/append', array( $this, 'content_archive_append' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/index/append', array( $this, 'content_archive_append' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/archive/append', array( $this, 'content_archive_append' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/search/append', array( $this, 'content_archive_append' ) );
 
-		add_action( 'pera/theme_hook/content/index/prepend', array( $this, 'content_index_prepend' ) );
-		add_action( 'pera/theme_hook/content/archive/prepend', array( $this, 'content_archive_prepend' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/index/prepend', array( $this, 'content_index_prepend' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/archive/prepend', array( $this, 'content_archive_prepend' ) );
 
-		add_action( 'pera/theme_hook/content/page/append', array( $this, 'content_page_append' ) );
-		add_action( 'pera/theme_hook/content/single/append', array( $this, 'content_single_append' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/page/append', array( $this, 'content_page_append' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/single/append', array( $this, 'content_single_append' ) );
 
-		add_action( 'pera/theme_hook/header', array( $this, 'header' ) );
-		add_action( 'pera/theme_hook/navi/global', array( $this, 'global_navi' ) );
-		add_action( 'pera/theme_hook/site_info', array( $this, 'site_info' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/header', array( $this, 'header' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/navi/global', array( $this, 'global_navi' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/site_info', array( $this, 'site_info' ) );
 
-		add_action( 'pera/theme_hook/entry/post_thumbnail', array( $this, 'post_thumbnail' ) );
-		add_action( 'pera/theme_hook/entry/meta/header', array( $this, 'entry_meta_header' ) );
-		add_action( 'pera/theme_hook/entry/meta/footer', array( $this, 'entry_meta_footer' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/entry/post_thumbnail', array( $this, 'post_thumbnail' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/entry/meta/header', array( $this, 'entry_meta_header' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/entry/meta/footer', array( $this, 'entry_meta_footer' ) );
 	}
 
 	public function header() {
@@ -73,7 +73,7 @@ class Theme_Hooks {
 				<h1 class="page-title">
 					<?php
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'pera' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search Results for: %s', 'wp-theme-boilerplate' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header><!-- .page-header -->
@@ -102,20 +102,20 @@ class Theme_Hooks {
 	}
 
 	public function post_thumbnail() {
-		if ( class_exists( 'Pera\Functions\Post_Thumbnail' ) && method_exists( 'Pera\Functions\Post_Thumbnail', 'post_thumbnail' ) ) {
-			\Pera\Functions\Post_Thumbnail::post_thumbnail();
+		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Post_Thumbnail' ) && method_exists( 'WP_Theme_Boilerplate\Functions\Post_Thumbnail', 'post_thumbnail' ) ) {
+			\WP_Theme_Boilerplate\Functions\Post_Thumbnail::post_thumbnail();
 		}
 	}
 
 	public function entry_meta_header() {
-		if ( class_exists( 'Pera\Functions\Entry_Meta' ) && method_exists( 'Pera\Functions\Entry_Meta', 'entry_header' ) ) {
-			\Pera\Functions\Entry_Meta::entry_header();
+		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Entry_Meta' ) && method_exists( 'WP_Theme_Boilerplate\Functions\Entry_Meta', 'entry_header' ) ) {
+			\WP_Theme_Boilerplate\Functions\Entry_Meta::entry_header();
 		}
 	}
 
 	public function entry_meta_footer() {
-		if ( class_exists( 'Pera\Functions\Entry_Meta' ) && method_exists( 'Pera\Functions\Entry_Meta', 'entry_footer' ) ) {
-			\Pera\Functions\Entry_Meta::entry_footer();
+		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Entry_Meta' ) && method_exists( 'WP_Theme_Boilerplate\Functions\Entry_Meta', 'entry_footer' ) ) {
+			\WP_Theme_Boilerplate\Functions\Entry_Meta::entry_footer();
 		}
 	}
 

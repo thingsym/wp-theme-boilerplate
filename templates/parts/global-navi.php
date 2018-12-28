@@ -2,7 +2,7 @@
 /**
  * global navi
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  */
 
 ?>

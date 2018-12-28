@@ -1,6 +1,6 @@
-=== Pera ===
+=== WP Theme Boilerplate ===
 
-Contributors: automattic
+Contributors: thingsym
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5

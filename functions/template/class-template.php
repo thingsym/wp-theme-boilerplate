@@ -2,11 +2,11 @@
 /**
  * Template
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  * @since 1.0.0
  */
 
-namespace Pera\Functions;
+namespace WP_Theme_Boilerplate\Functions;
 
 /**
  * class Template

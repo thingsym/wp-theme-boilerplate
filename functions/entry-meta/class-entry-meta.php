@@ -2,11 +2,11 @@
 /**
  * Entry Meta
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  * @since 1.0.0
  */
 
-namespace Pera\Functions;
+namespace WP_Theme_Boilerplate\Functions;
 
 class Entry_Meta {
 
@@ -32,7 +32,7 @@ class Entry_Meta {
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'pera' ),
+			esc_html_x( 'Posted on %s', 'post date', 'wp-theme-boilerplate' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -42,7 +42,7 @@ class Entry_Meta {
 	public static function posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'pera' ),
+			esc_html_x( 'by %s', 'post author', 'wp-theme-boilerplate' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -53,17 +53,17 @@ class Entry_Meta {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'pera' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'wp-theme-boilerplate' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'pera' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp-theme-boilerplate' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'pera' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'wp-theme-boilerplate' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'pera' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wp-theme-boilerplate' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
@@ -73,7 +73,7 @@ class Entry_Meta {
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'pera' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'wp-theme-boilerplate' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -90,7 +90,7 @@ class Entry_Meta {
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'pera' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'wp-theme-boilerplate' ),
 					array(
 						'span' => array(
 							'class' => array(),

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  */
 
 ?>
@@ -15,18 +15,18 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-		<?php do_action( 'pera/theme_hook/entry/meta/header' ); ?>
+		<?php do_action( 'wp_theme_boilerplate/theme_hook/entry/meta/header' ); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php do_action( 'pera/theme_hook/entry/post_thumbnail' ); ?>
+	<?php do_action( 'wp_theme_boilerplate/theme_hook/entry/post_thumbnail' ); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-	<?php do_action( 'pera/theme_hook/entry/meta/footer' ); ?>
+	<?php do_action( 'wp_theme_boilerplate/theme_hook/entry/meta/footer' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
