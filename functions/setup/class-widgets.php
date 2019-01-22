@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-namespace WP_Theme_Boilerplate\Setup;
+namespace WP_Theme_Boilerplate\Functions\Setup;
 
 /**
  * class Widgets

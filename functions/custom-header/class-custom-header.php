@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-namespace WP_Theme_Boilerplate\Functions;
+namespace WP_Theme_Boilerplate\Functions\Custom_Header;
 
 /**
  * class Custom_Header

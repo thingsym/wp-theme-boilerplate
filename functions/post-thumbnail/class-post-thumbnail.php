@@ -6,7 +6,7 @@
  * @since 1.0.0
  */
 
-namespace WP_Theme_Boilerplate\Functions;
+namespace WP_Theme_Boilerplate\Functions\Post_Thumbnail;
 
 class Post_Thumbnail {
 
