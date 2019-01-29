@@ -2,7 +2,7 @@
 /**
  * Template part for 404 posts
  *
- * @package Pera
+ * @package WP Theme Boilerplate
  */
 
 ?>
