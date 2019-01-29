@@ -1,6 +1,6 @@
 <?php
 /**
- * theme
+ * Theme
  *
  * @package WP Theme Boilerplate
  * @since 1.0.0
@@ -9,7 +9,7 @@
 namespace WP_Theme_Boilerplate\Functions\Setup;
 
 /**
- * class Theme
+ * Class Theme
  *
  * @since 1.0.0
  */
@@ -65,31 +65,46 @@ class Theme {
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( $this->hook_prefix . 'custom-background/args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				$this->hook_prefix . 'custom-background/args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Set up the WordPress core custom header feature.
 		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Custom_Header' ) ) {
 			global $custom_header;
-			add_theme_support( 'custom-header', apply_filters( $this->hook_prefix . 'custom-header/args', array(
-				'default-image'          => '',
-				'default-text-color'     => '000000',
-				'width'                  => 1000,
-				'height'                 => 250,
-				'flex-height'            => true,
-				'wp-head-callback'       => array( $custom_header, 'header_style' ),
-			) ) );
+			add_theme_support(
+				'custom-header',
+				apply_filters(
+					$this->hook_prefix . 'custom-header/args',
+					array(
+						'default-image'      => '',
+						'default-text-color' => '000000',
+						'width'              => 1000,
+						'height'             => 250,
+						'flex-height'        => true,
+						'wp-head-callback'   => array( $custom_header, 'header_style' ),
+					)
+				)
+			);
 		}
 
 		// Add theme support for selective refresh for widgets.
@@ -100,12 +115,15 @@ class Theme {
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );

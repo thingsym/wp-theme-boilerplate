@@ -8,6 +8,11 @@
 
 namespace WP_Theme_Boilerplate\Functions\Post_Thumbnail;
 
+/**
+ * Class Post_Thumbnail
+ *
+ * @since 1.0.0
+ */
 class Post_Thumbnail {
 
 	public function __construct() {}
@@ -17,28 +22,34 @@ class Post_Thumbnail {
 			return;
 		}
 
-?>
+		?>
 <div class="post-thumbnail">
-<?php
+		<?php
 		if ( is_singular() ) :
 			the_post_thumbnail();
-		else : ?>
+		else :
+			?>
 
 <a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-?>
+			<?php
+			the_post_thumbnail(
+				'post-thumbnail',
+				array(
+					'alt' => the_title_attribute(
+						array(
+							'echo' => false,
+						)
+					),
+				)
+			);
+			?>
 </a>
 
-<?php
+			<?php
 		endif; // End is_singular().
-?>
+		?>
 </div>
-<?php
+		<?php
 	}
 
 }

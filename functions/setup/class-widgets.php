@@ -9,7 +9,7 @@
 namespace WP_Theme_Boilerplate\Functions\Setup;
 
 /**
- * class Widgets
+ * Class Widgets
  *
  * @since 1.0.0
  */
@@ -28,15 +28,17 @@ class Widgets {
 	 */
 	public function init() {
 
-		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar', 'wp-theme-boilerplate' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'wp-theme-boilerplate' ),
-			'before_widget' => '<section class="widget %2$s %1$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		) );
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Sidebar', 'wp-theme-boilerplate' ),
+				'id'            => 'sidebar-1',
+				'description'   => esc_html__( 'Add widgets here.', 'wp-theme-boilerplate' ),
+				'before_widget' => '<section class="widget %2$s %1$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
 
 	}
 

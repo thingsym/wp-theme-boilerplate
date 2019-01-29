@@ -11,6 +11,7 @@
  *
  * @package WP Theme Boilerplate
  */
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -35,11 +36,12 @@ if ( have_posts() ) {
 	do_action( 'wp_theme_boilerplate/theme_hook/content/index/prepend' );
 	while ( have_posts() ) :
 		the_post();
-		/*
-		* Include the Post-Type-specific template for the content.
-		* If you want to override this in a child theme, then include a file
-		* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-		*/
+
+		/**
+		 * Include the Post-Type-specific template for the content.
+		 * If you want to override this in a child theme, then include a file
+		 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+		 */
 		get_template_part( 'templates/content/archive', get_post_type() );
 	endwhile;
 	do_action( 'wp_theme_boilerplate/theme_hook/content/index/append' );

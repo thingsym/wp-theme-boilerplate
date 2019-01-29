@@ -9,10 +9,9 @@
 namespace WP_Theme_Boilerplate\Functions\Customizer;
 
 /**
- * class Customizer
+ * Class Customizer
  *
  * @since 1.0.0
- *
  */
 class Customizer {
 	public function __construct() {

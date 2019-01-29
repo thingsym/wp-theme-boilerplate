@@ -11,6 +11,7 @@
  *
  * @package WP Theme Boilerplate
  */
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

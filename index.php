@@ -11,3 +11,5 @@
  *
  * @package WP Theme Boilerplate
  */
+
+// The template files are in templates folder.

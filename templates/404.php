@@ -6,6 +6,7 @@
  *
  * @package Pera
  */
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

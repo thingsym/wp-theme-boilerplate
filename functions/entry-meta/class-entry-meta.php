@@ -8,6 +8,11 @@
 
 namespace WP_Theme_Boilerplate\Functions\Entry_Meta;
 
+/**
+ * Class Entry_Meta
+ *
+ * @since 1.0.0
+ */
 class Entry_Meta {
 
 	public function __construct() {}
@@ -23,7 +28,8 @@ class Entry_Meta {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
+		$time_string = sprintf(
+			$time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( DATE_W3C ) ),

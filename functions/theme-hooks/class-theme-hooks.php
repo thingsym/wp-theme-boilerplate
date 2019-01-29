@@ -9,7 +9,7 @@
 namespace WP_Theme_Boilerplate\Functions\Theme_Hooks;
 
 /**
- * class Theme_Hooks
+ * Class Theme_Hooks
  *
  * @since 1.0.0
  */
@@ -65,7 +65,7 @@ class Theme_Hooks {
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-		<?php
+			<?php
 		}
 		elseif ( is_search() ) {
 			?>
@@ -77,7 +77,7 @@ class Theme_Hooks {
 					?>
 				</h1>
 			</header><!-- .page-header -->
-		<?php
+			<?php
 		}
 	}
 

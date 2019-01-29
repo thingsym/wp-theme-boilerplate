@@ -1,6 +1,6 @@
 <?php
 /**
- * styles and scripts
+ * Styles and scripts
  *
  * @package WP Theme Boilerplate
  * @since 1.0.0
@@ -9,7 +9,7 @@
 namespace WP_Theme_Boilerplate\Functions\Setup;
 
 /**
- * class Styles_Scripts
+ * Class Styles_Scripts
  *
  * @since 1.0.0
  */
@@ -61,7 +61,7 @@ class Styles_Scripts {
 
 	/**
 	 * Enqueue styles for Gutenberg
-	*/
+	 */
 	public function block_editor_styles() {
 		wp_enqueue_style( 'wp-theme-boilerplate-block-editor-styles', get_stylesheet_directory_uri() . '/css/block-editor-style.css', false, '1.0', 'all' );
 	}

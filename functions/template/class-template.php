@@ -9,7 +9,7 @@
 namespace WP_Theme_Boilerplate\Functions\Template;
 
 /**
- * class Template
+ * Class Template
  *
  * @since 1.0.0
  */
@@ -22,7 +22,7 @@ class Template {
 	}
 
 	/**
-	 * custom template hierarchy
+	 * Custom template hierarchy
 	 *
 	 * @since 1.0.0
 	 */
@@ -48,21 +48,24 @@ class Template {
 		);
 
 		foreach ( $types as $type ) {
-			add_filter( "{$type}_template_hierarchy", function( $templates ) {
-				$custom_templates = array();
+			add_filter(
+				"{$type}_template_hierarchy",
+				function( $templates ) {
+					$custom_templates = array();
 
-				foreach ( $templates as $template ) {
-					$custom_templates[] = $this->templates_dir . $template;
-					$custom_templates[] = $template;
+					foreach ( $templates as $template ) {
+						$custom_templates[] = $this->templates_dir . $template;
+						$custom_templates[] = $template;
+					}
+
+					return $custom_templates;
 				}
-
-				return $custom_templates;
-			} );
+			);
 		}
 	}
 
 	/**
-	 * get search_form from templates/parts
+	 * Get search_form from templates/parts
 	 *
 	 * @since 1.0.0
 	 */
