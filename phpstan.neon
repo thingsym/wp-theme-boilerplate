@@ -1,0 +1,8 @@
+parameters:
+  level: max
+  paths: 
+    - ./
+  excludes_analyse:
+    - ./tests
+    - ./vendor
+  autoload_files: []
