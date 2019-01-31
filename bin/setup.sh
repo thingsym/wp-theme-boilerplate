@@ -78,3 +78,5 @@ find . -type f -not -iwholename './README.md' -type f -not -iwholename './bin/*'
 find . -type f -not -iwholename './README.md' -type f -not -iwholename './bin/*' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -name '.*' | xargs sed -i "s/https:\/\/www.thingslabo.com\///g"
 
 echo "Info: Generated a WordPress theme: ${THEME}"
+
+echo "Info: Please manually delete the bin directory after Theme Starter script execution."
