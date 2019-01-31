@@ -33,6 +33,8 @@ if [ ! -d ../${THEME_KEBAB} ]; then
   exit 1
 fi
 
+echo "Info: Run Theme Starter script"
+
 if [ -d ./.git ]; then
   rm -rf ./.git
   echo "Info: Delete .git"
