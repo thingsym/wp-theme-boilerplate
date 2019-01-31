@@ -19,11 +19,6 @@ if [ $1 != '--theme' ]; then
   exit 1
 fi
 
-if [ -d ./.git ]; then
-  rm -rf ./.git
-  echo "Info: Delete .git"
-fi
-
 THEME=$2
 THEME_LOWER=${THEME,,}
 THEME_PASCAL_SNAKE=`echo ${THEME} | sed -r 's/ /_/g'`
@@ -36,6 +31,11 @@ if [ ! -d ../${THEME_KEBAB} ]; then
   echo "Directory name: $(cd $(dirname $0)/..;pwd)"
   echo "Theme Slug: ${THEME_KEBAB}"
   exit 1
+fi
+
+if [ -d ./.git ]; then
+  rm -rf ./.git
+  echo "Info: Delete .git"
 fi
 
 if [ -f ./languages/wp-theme-boilerplate.pot ]; then
