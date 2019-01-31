@@ -50,7 +50,7 @@
   "scripts": {
     "setup": "bash bin/setup.sh",
     "makepot": "php /usr/local/share/wp-i18n/makepot.php wp-theme ../wp-theme-boilerplate ../wp-theme-boilerplate/languages/wp-theme-boilerplate.pot",
-    "msgfmt:ja": "msgfmt -o languages/ja.mo languages/ja.po",
+    "msgfmt:ja": "msgfmt languages/ja.po -o languages/ja.mo",
     "msgfmt": "run-p \"msgfmt:*\"",
     "sass:style": "node-sass scss/style.scss css/style.css --output-style expanded && postcss --use autoprefixer --no-map -r css/style.css",
     "sass:style:minify": "node-sass scss/style.scss css/style.min.css --output-style compressed && postcss --use autoprefixer --no-map -r css/style.min.css",
