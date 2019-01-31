@@ -32,9 +32,9 @@ THEME_SNAKE=`echo ${THEME_LOWER} | sed -r 's/ /_/g'`
 
 if [ ! -d ../${THEME_KEBAB} ]; then
   echo "Error: Cannot execute"
-  echo "The directory name and the theme name should be the same character string"
+  echo "The directory name and the Theme Slug should be the same character string"
   echo "Directory name: $(cd $(dirname $0)/..;pwd)"
-  echo "Theme name: ${THEME_KEBAB}"
+  echo "Theme Slug: ${THEME_KEBAB}"
   exit 1
 fi
 
