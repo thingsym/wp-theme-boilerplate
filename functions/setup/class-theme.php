@@ -89,23 +89,20 @@ class Theme {
 		);
 
 		// Set up the WordPress core custom header feature.
-		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Custom_Header' ) ) {
-			global $custom_header;
-			add_theme_support(
-				'custom-header',
-				apply_filters(
-					$this->hook_prefix . 'custom-header/args',
-					array(
-						'default-image'      => '',
-						'default-text-color' => '000000',
-						'width'              => 1000,
-						'height'             => 250,
-						'flex-height'        => true,
-						'wp-head-callback'   => array( $custom_header, 'header_style' ),
-					)
+		add_theme_support(
+			'custom-header',
+			apply_filters(
+				$this->hook_prefix . 'custom-header/args',
+				array(
+					'default-image'      => '',
+					'default-text-color' => '000000',
+					'width'              => 1000,
+					'height'             => 250,
+					'flex-height'        => true,
+					'wp-head-callback'   => array( 'WP_Theme_Boilerplate\Functions\Custom_Header\Custom_Header', 'header_style' ),
 				)
-			);
-		}
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );

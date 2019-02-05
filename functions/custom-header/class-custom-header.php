@@ -26,7 +26,7 @@ class Custom_Header {
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 */
-	public function header_style() {
+	public static function header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
