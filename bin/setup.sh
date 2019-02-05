@@ -74,4 +74,4 @@ find . -type f -name 'package.json' -not -iwholename './.git/*' -not -iwholename
 
 echo "Info: Generated a WordPress theme: ${THEME}"
 
-echo "Info: Please manually delete the bin directory after Theme Starter script execution."
+echo "Info: Please manually delete the bin/setup.sh after Theme Starter script execution."
