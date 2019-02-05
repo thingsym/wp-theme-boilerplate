@@ -77,7 +77,7 @@ class Template {
 		$form = ob_get_clean();
 
 		if ( empty( $form ) ) {
-			return null;
+			return '';
 		}
 
 		return $form;
