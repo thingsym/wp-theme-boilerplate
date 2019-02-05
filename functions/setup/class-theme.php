@@ -157,9 +157,7 @@ class Theme {
 	}
 
 	public function print_meta() {
-		echo '<meta charset="' . get_bloginfo( 'charset' ) . '">' . "\n";
-		echo '<meta name="viewport" content="width=device-width, initial-scale=1">' . "\n";
-		echo '<link rel="profile" href="https://gmpg.org/xfn/11">' . "\n";
+		get_template_part( 'templates/parts/meta' );
 	}
 
 }
