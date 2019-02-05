@@ -15,3 +15,5 @@ new \WP_Theme_Boilerplate\Functions\Customizer\Customizer();
 new \WP_Theme_Boilerplate\Functions\Theme_Hooks\Theme_Hooks();
 
 $custom_header = new \WP_Theme_Boilerplate\Functions\Custom_Header\Custom_Header();
+new \WP_Theme_Boilerplate\Functions\Entry_Meta\Entry_Meta();
+new \WP_Theme_Boilerplate\Functions\Post_Thumbnail\Post_Thumbnail();

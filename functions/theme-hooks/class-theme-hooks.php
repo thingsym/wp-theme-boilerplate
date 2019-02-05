@@ -8,6 +8,9 @@
 
 namespace WP_Theme_Boilerplate\Functions\Theme_Hooks;
 
+use WP_Theme_Boilerplate\Functions\Post_Thumbnail\Post_Thumbnail;
+use WP_Theme_Boilerplate\Functions\Entry_Meta\Entry_Meta;
+
 /**
  * Class Theme_Hooks
  *
@@ -82,21 +85,15 @@ class Theme_Hooks {
 	}
 
 	public function post_thumbnail() {
-		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Post_Thumbnail' ) && method_exists( 'WP_Theme_Boilerplate\Functions\Post_Thumbnail', 'post_thumbnail' ) ) {
-			\WP_Theme_Boilerplate\Functions\Post_Thumbnail::post_thumbnail();
-		}
+		Post_Thumbnail::post_thumbnail();
 	}
 
 	public function entry_meta_header() {
-		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Entry_Meta' ) && method_exists( 'WP_Theme_Boilerplate\Functions\Entry_Meta', 'entry_header' ) ) {
-			\WP_Theme_Boilerplate\Functions\Entry_Meta::entry_header();
-		}
+		Entry_Meta::entry_header();
 	}
 
 	public function entry_meta_footer() {
-		if ( class_exists( 'WP_Theme_Boilerplate\Functions\Entry_Meta' ) && method_exists( 'WP_Theme_Boilerplate\Functions\Entry_Meta', 'entry_footer' ) ) {
-			\WP_Theme_Boilerplate\Functions\Entry_Meta::entry_footer();
-		}
+		Entry_Meta::entry_footer();
 	}
 
 }
