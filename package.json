@@ -83,11 +83,11 @@
     "lint:es": "eslint js/*.js",
     "lint": "run-p \"lint:*\"",
     "stats:css": "stylestats css/style.min.css & stylestats css/style-rtl.css & stylestats css/block-editor-style.css",
-    "serve:sync": "browser-sync start --server --files \"css/*.min.css\" \"js/*.min.js\"",
-    "serve:proxy": "browser-sync start --proxy \"vaw.local\" --https --files \"css/*.min.css\" \"js/*.min.js\"",
-    "serve": "run-p \"watch\" \"serve:proxy\"",
+    "bs:server": "browser-sync start --server --files \"css/*.min.css\" \"js/*.min.js\"",
+    "bs:proxy": "browser-sync start --proxy \"gutenberg.local\" --https --files \"css/*.min.css\" \"js/*.min.js\"",
     "watch:css": "chokidar \"src/scss/*.scss\" \"src/scss/**/*.scss\" -c \"npm run build:css\" --initial --polling",
     "watch:js": "chokidar \"js/*.js\" \"!js/*.min.js\" -c \"npm run build:js\" --initial --polling",
-    "watch": "run-p \"watch:*\""
+    "watch": "run-p \"watch:*\"",
+    "serve": "run-p \"watch\" \"bs:proxy\""
   }
 }
