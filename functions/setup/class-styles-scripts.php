@@ -39,7 +39,7 @@ class Styles_Scripts {
 		}
 
 		wp_enqueue_style(
-			'wp-theme-boilerplate-style',
+			'wp-theme-boilerplate',
 			$style_uri,
 			false,
 			wp_get_theme()->get( 'Version' ),
