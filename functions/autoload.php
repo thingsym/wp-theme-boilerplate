@@ -37,7 +37,7 @@ spl_autoload_register(
 		$relative_class = str_replace( '_', '-', $relative_class );
 		$relative_class = preg_replace( '/(.*\/)(.*?)$/', '/$1class-$2', $relative_class );
 
-		$path = get_theme_file_path() . $relative_class . '.php';
+		$path = get_theme_file_path( $relative_class . '.php' );
 
 		if ( file_exists( $path ) ) {
 			require_once $path;
