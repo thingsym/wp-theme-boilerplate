@@ -74,13 +74,13 @@ class Template {
 
 		ob_start();
 		get_template_part( 'templates/parts/search_form' );
-		$form = ob_get_clean();
+		$tmp_form = ob_get_clean();
 
 		if ( empty( $form ) ) {
-			return '';
+			return $form;
 		}
 
-		return $form;
+		return $tmp_form;
 	}
 
 }
