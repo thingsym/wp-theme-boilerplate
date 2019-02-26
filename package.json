@@ -1,11 +1,11 @@
 {
   "name": "wp-theme-boilerplate",
-  "version": "0.1.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Next Generation WordPress Theme Starter Kit",
+  "homepage": "https://github.com/thingsym/wp-theme-boilerplate",
   "bugs": {
     "url": "https://github.com/thingsym/wp-theme-boilerplate/issues"
   },
-  "homepage": "https://github.com/thingsym/wp-theme-boilerplate",
   "devDependencies": {
     "@wordpress/browserslist-config": "^2.2.2",
     "autoprefixer": "^9.4.0",
