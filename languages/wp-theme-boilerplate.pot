@@ -53,7 +53,7 @@ msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: functions/entry-meta/class-entry-meta.php:93 templates/content/page.php:37
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgid "Edit<span class=\"screen-reader-text\"> %s</span>"
 msgstr ""
 
 #: functions/setup/class-theme.php:62
