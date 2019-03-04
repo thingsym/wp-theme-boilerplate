@@ -48,22 +48,21 @@
   },
   "eslintConfig": {
     "env": {
-        "browser": true,
-        "es6": true
+      "browser": true,
+      "es6": true
     },
     "extends": "eslint:recommended",
     "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly",
-        "jQuery": true,
-        "$": false,
-        "wp": true
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly",
+      "jQuery": true,
+      "$": false,
+      "wp": true
     },
     "parserOptions": {
-        "ecmaVersion": 2018
+      "ecmaVersion": 2018
     },
-    "rules": {
-    }
+    "rules": {}
   },
   "scripts": {
     "setup": "bash bin/setup.sh",
