@@ -76,7 +76,7 @@ class Template {
 		get_template_part( 'templates/parts/search_form' );
 		$tmp_form = ob_get_clean();
 
-		if ( empty( $form ) ) {
+		if ( empty( $tmp_form ) ) {
 			return $form;
 		}
 
