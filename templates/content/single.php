@@ -54,6 +54,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+	<div class="entry-meta">
 	<?php do_action( 'wp_theme_boilerplate/theme_hook/entry/meta/footer' ); ?>
+	</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
