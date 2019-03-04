@@ -10,7 +10,7 @@
 ?>
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'wp-theme-boilerplate' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Not Found', 'wp-theme-boilerplate' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
