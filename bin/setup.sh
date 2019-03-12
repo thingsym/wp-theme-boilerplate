@@ -21,7 +21,8 @@ fi
 
 THEME=$2
 THEME_LOWER=${THEME,,}
-THEME_PASCAL_SNAKE=`echo ${THEME} | sed -r 's/ /_/g'`
+THEME_ARRAY=($THEME)
+THEME_PASCAL_SNAKE=`echo ${THEME_ARRAY[@]^} | sed -r 's/ /_/g'`
 THEME_KEBAB=`echo ${THEME_LOWER} | sed -r 's/ /-/g'`
 THEME_SNAKE=`echo ${THEME_LOWER} | sed -r 's/ /_/g'`
 
