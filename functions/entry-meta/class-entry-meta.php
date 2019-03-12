@@ -19,6 +19,7 @@ class Entry_Meta {
 
 	public static function entry_header() {
 		self::posted_on();
+		self::modified_on();
 		self::posted_by();
 	}
 
@@ -43,6 +44,33 @@ class Entry_Meta {
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span> '; // WPCS: XSS OK.
+	}
+
+	public static function modified_on() {
+		if ( empty( get_option( 'date_format' ) ) ) {
+			return;
+		}
+
+		if ( get_the_modified_time( 'U' ) < get_the_time( 'U' ) ) {
+			return;
+		}
+
+		$time_string = '<time class="entry-date modified" datetime="%1$s">%2$s %3$s</time>';
+
+		$time_string = sprintf(
+			$time_string,
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() ),
+			esc_html( get_the_modified_time() )
+		);
+
+		$modified_on = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( 'Modified on %s', 'post date', 'wp-theme-boilerplate' ),
+			$time_string
+		);
+
+		echo '<span class="modified-on">' . $modified_on . '</span> '; // WPCS: XSS OK.
 	}
 
 	public static function posted_by() {
