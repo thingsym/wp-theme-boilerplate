@@ -48,8 +48,21 @@ class Style_Script {
 	 * Enqueue scripts for front-end.
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( 'wp-theme-boilerplate-navigation', get_template_directory_uri() . '/js/navigation.min.js', array(), '20151215', true );
-		wp_enqueue_script( 'wp-theme-boilerplate-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.min.js', array(), '20151215', true );
+		wp_enqueue_script(
+			'wp-theme-boilerplate-navigation',
+			get_template_directory_uri() . '/js/navigation.min.js',
+			array(),
+			'20151215',
+			true
+		);
+
+		wp_enqueue_script(
+			'wp-theme-boilerplate-skip-link-focus-fix',
+			get_template_directory_uri() . '/js/skip-link-focus-fix.min.js',
+			array(),
+			'20151215',
+			true
+		);
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -60,7 +73,13 @@ class Style_Script {
 	 * Enqueue styles for Gutenberg
 	 */
 	public function block_editor_styles() {
-		wp_enqueue_style( 'wp-theme-boilerplate-block-editor-styles', get_stylesheet_directory_uri() . '/css/block-editor-style.css', false, '1.0', 'all' );
+		wp_enqueue_style(
+			'wp-theme-boilerplate-block-editor',
+			get_stylesheet_directory_uri() . '/css/block-editor-style.css',
+			false,
+			'1.0',
+			'all'
+		);
 	}
 
 }
