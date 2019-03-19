@@ -51,7 +51,7 @@ class Entry_Meta {
 			return;
 		}
 
-		if ( get_the_modified_time( 'U' ) < get_the_time( 'U' ) ) {
+		if ( get_the_modified_time( 'U' ) <= get_the_time( 'U' ) ) {
 			return;
 		}
 
