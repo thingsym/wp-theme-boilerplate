@@ -46,7 +46,7 @@ if [ -f ./languages/wp-theme-boilerplate.pot ]; then
   echo "Info: Generated ${THEME_KEBAB}.pot"
 fi
 
-find . -type f -name '*.php' -o -name '*.pot' -o -name 'readme.txt' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/WP Theme Boilerplate/${THEME}/g"
+find . -type f -name '*.php' -o -name '*.pot' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/WP Theme Boilerplate/${THEME}/g"
 
 find . -type f -name '*.php' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/WP_Theme_Boilerplate/${THEME_PASCAL_SNAKE}/g"
 find . -type f -name '*.php' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/wp_theme_boilerplate/${THEME_SNAKE}/g"
@@ -63,9 +63,10 @@ find . -type f -name 'style.css' -not -iwholename './.git/*' -not -iwholename '.
 find . -type f -name 'style.css' -o -name '*.pot' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/https:\/\/www.thingslabo.com\///g"
 
 find . -type f -name '*.pot' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/https:\/\/github.com\/thingsym\/wp-theme-boilerplate//g"
-find . -type f -name '*.pot' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/Copyright (C) 2018 thingsym/Copyright (C) 2018 /g"
+find . -type f -name '*.pot' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/Copyright (C) [0-9]\+ thingsym/Copyright (C) /g"
 find . -type f -name '*.pot' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/msgid \"thingsym\"/msgid \"\"/g"
 
+find . -type f -name 'readme.txt' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/=== WP Theme Boilerplate ===/=== ${THEME} ===/g"
 find . -type f -name 'readme.txt' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/Contributors: thingsym/Contributors: /g"
 
 find . -type f -name '*.json' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/\"name\": \"wp-theme-boilerplate\"/\"name\": \"${THEME_KEBAB}\"/g"
