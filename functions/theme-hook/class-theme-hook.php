@@ -1,22 +1,22 @@
 <?php
 /**
- * Theme Hooks
+ * Theme Hook
  *
  * @package WP Theme Boilerplate
  * @since 1.0.0
  */
 
-namespace WP_Theme_Boilerplate\Functions\Theme_Hooks;
+namespace WP_Theme_Boilerplate\Functions\Theme_Hook;
 
 use WP_Theme_Boilerplate\Functions\Post_Thumbnail\Post_Thumbnail;
 use WP_Theme_Boilerplate\Functions\Entry_Meta\Entry_Meta;
 
 /**
- * Class Theme_Hooks
+ * Class Theme_Hook
  *
  * @since 1.0.0
  */
-class Theme_Hooks {
+class Theme_Hook {
 	public function __construct() {
 		add_action( 'wp_theme_boilerplate/theme_hook/content/index/prepend', array( $this, 'content_index_prepend' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/content/archive/prepend', array( $this, 'content_archive_prepend' ) );

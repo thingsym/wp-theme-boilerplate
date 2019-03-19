@@ -1,6 +1,6 @@
 <?php
 /**
- * Widgets
+ * Widget
  *
  * @package WP Theme Boilerplate
  * @since 1.0.0
@@ -9,11 +9,11 @@
 namespace WP_Theme_Boilerplate\Functions\Setup;
 
 /**
- * Class Widgets
+ * Class Widget
  *
  * @since 1.0.0
  */
-class Widgets {
+class Widget {
 
 	public function __construct() {
 		add_action( 'widgets_init', array( $this, 'init' ) );

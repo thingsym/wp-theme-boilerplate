@@ -1,6 +1,6 @@
 <?php
 /**
- * Styles and scripts
+ * Style and script
  *
  * @package WP Theme Boilerplate
  * @since 1.0.0
@@ -9,11 +9,11 @@
 namespace WP_Theme_Boilerplate\Functions\Setup;
 
 /**
- * Class Styles_Scripts
+ * Class Style_Script
  *
  * @since 1.0.0
  */
-class Styles_Scripts {
+class Style_Script {
 
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );

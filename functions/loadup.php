@@ -7,12 +7,12 @@
  */
 
 new \WP_Theme_Boilerplate\Functions\Setup\Theme();
-new \WP_Theme_Boilerplate\Functions\Setup\Styles_Scripts();
-new \WP_Theme_Boilerplate\Functions\Setup\Widgets();
+new \WP_Theme_Boilerplate\Functions\Setup\Style_Script();
+new \WP_Theme_Boilerplate\Functions\Setup\Widget();
 
 new \WP_Theme_Boilerplate\Functions\Template\Template();
 new \WP_Theme_Boilerplate\Functions\Customizer\Customizer();
-new \WP_Theme_Boilerplate\Functions\Theme_Hooks\Theme_Hooks();
+new \WP_Theme_Boilerplate\Functions\Theme_Hook\Theme_Hook();
 
 new \WP_Theme_Boilerplate\Functions\Custom_Header\Custom_Header();
 new \WP_Theme_Boilerplate\Functions\Entry_Meta\Entry_Meta();
