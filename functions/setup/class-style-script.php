@@ -26,16 +26,13 @@ class Style_Script {
 	 */
 	public function enqueue_styles() {
 
-		$style_uri = get_stylesheet_directory_uri() . '/style.css';
+		$style_uri = get_stylesheet_uri();
 
 		if ( is_dir( get_stylesheet_directory() . '/css' ) && is_file( get_stylesheet_directory() . '/css/style.min.css' ) ) {
 			$style_uri = get_stylesheet_directory_uri() . '/css/style.min.css';
 		}
 		elseif ( is_dir( get_stylesheet_directory() . '/css' ) && is_file( get_stylesheet_directory() . '/css/style.css' ) ) {
 			$style_uri = get_stylesheet_directory_uri() . '/css/style.css';
-		}
-		elseif ( is_file( get_stylesheet_directory() . '/style.css' ) ) {
-			$style_uri = get_stylesheet_directory_uri() . '/style.css';
 		}
 
 		wp_enqueue_style(
