@@ -4,35 +4,49 @@ Contributors: thingsym
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.7
-Tested up to: 4.8
+Tested up to: 5.1
 Stable tag: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+License: GPL2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called Pera.
+Put short description of your theme. This should be no more than 150 characters. No markup here
 
 == Description ==
 
-Description
+Put long description of your theme. No limit, and you can use Markdown (as well as in the following sections).
 
 == Installation ==
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+= Case of using WordPress theme installer =
 
-== Frequently Asked Questions ==
+1. Go the Appearance > Themes menu in WordPress and click the Add New button.
+2. Put keyword and search theme.
+3. Click Install button.
+4. Activate the theme through the Appearance > Themes menu in WordPress.
+5. Have fun!
 
-= Does this theme support any plugins? =
+= Case of uploading theme zip file =
 
-Pera includes support for Infinite Scroll in Jetpack.
+1. Download theme's zip file.
+2. Go the Appearance > Themes menu in WordPress and click the Add New button.
+3. Click the Upload Theme button and Choose theme's zip file
+4. Click Install Now.
+5. Activate the theme through the Appearance > Themes menu in WordPress.
+6. Have fun!
+
+= Case of uploading theme to directory via FTP =
+
+1. Download and unzip theme's zip file.
+2. Upload theme folder to the "/wp-content/themes/" directory.
+3. Activate the theme through the Appearance > Themes menu in WordPress.
+4. Have fun!
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0.0 - 2019.03.21 =
 * Initial release
 
-== Credits ==
+== Resources ==
 
-* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+* Based on [WP Theme Boilerplate](https://github.com/thingsym/wp-theme-boilerplate), [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* CSS reset by [normalize.css](https://necolas.github.io/normalize.css/), [MIT](https://opensource.org/licenses/MIT)
