@@ -117,6 +117,10 @@ class Theme {
 				'width'       => 250,
 				'flex-width'  => true,
 				'flex-height' => true,
+				'header-text' => array(
+					'site-title',
+					'site-description',
+				),
 			)
 		);
 
