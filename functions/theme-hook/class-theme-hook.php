@@ -28,9 +28,9 @@ class Theme_Hook {
 		add_action( 'wp_theme_boilerplate/theme_hook/content/page/append', array( $this, 'content_page_append' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/content/single/append', array( $this, 'content_single_append' ) );
 
-		add_action( 'wp_theme_boilerplate/theme_hook/header', array( $this, 'header' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/site/header', array( $this, 'header' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/navi/global', array( $this, 'global_navi' ) );
-		add_action( 'wp_theme_boilerplate/theme_hook/site_info', array( $this, 'site_info' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/site/site_info', array( $this, 'site_info' ) );
 
 		add_action( 'wp_theme_boilerplate/theme_hook/entry/post_thumbnail', array( $this, 'post_thumbnail' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/entry/meta/header', array( $this, 'entry_meta_header' ) );

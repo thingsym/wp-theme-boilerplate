@@ -23,7 +23,7 @@
 <div class="container">
 <?php do_action( 'wp_theme_boilerplate/theme_hook/site/header/before' ); ?>
 <header class="site-header">
-<?php do_action( 'wp_theme_boilerplate/theme_hook/header' ); ?>
+<?php do_action( 'wp_theme_boilerplate/theme_hook/site/header' ); ?>
 </header>
 <?php do_action( 'wp_theme_boilerplate/theme_hook/site/header/after' ); ?>
 
@@ -52,8 +52,8 @@ do_action( 'wp_theme_boilerplate/theme_hook/content/append' );
 <?php do_action( 'wp_theme_boilerplate/theme_hook/site/footer/before' ); ?>
 <footer class="site-footer">
 <?php
-do_action( 'wp_theme_boilerplate/theme_hook/footer' );
-do_action( 'wp_theme_boilerplate/theme_hook/site_info' );
+do_action( 'wp_theme_boilerplate/theme_hook/site/footer' );
+do_action( 'wp_theme_boilerplate/theme_hook/site/site_info' );
 ?>
 </footer>
 <?php do_action( 'wp_theme_boilerplate/theme_hook/site/footer/after' ); ?>
