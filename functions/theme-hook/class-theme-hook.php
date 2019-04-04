@@ -18,15 +18,15 @@ use WP_Theme_Boilerplate\Functions\Entry_Meta\Entry_Meta;
  */
 class Theme_Hook {
 	public function __construct() {
-		add_action( 'wp_theme_boilerplate/theme_hook/content/index/prepend', array( $this, 'content_index_prepend' ) );
-		add_action( 'wp_theme_boilerplate/theme_hook/content/archive/prepend', array( $this, 'content_archive_prepend' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/index/prepend', array( $this, 'prepend_content_index' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/archive/prepend', array( $this, 'prepend_content_archive' ) );
 
-		add_action( 'wp_theme_boilerplate/theme_hook/content/index/append', array( $this, 'content_archive_append' ) );
-		add_action( 'wp_theme_boilerplate/theme_hook/content/archive/append', array( $this, 'content_archive_append' ) );
-		add_action( 'wp_theme_boilerplate/theme_hook/content/search/append', array( $this, 'content_archive_append' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/index/append', array( $this, 'append_content_archive' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/archive/append', array( $this, 'append_content_archive' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/search/append', array( $this, 'append_content_archive' ) );
 
-		add_action( 'wp_theme_boilerplate/theme_hook/content/page/append', array( $this, 'content_page_append' ) );
-		add_action( 'wp_theme_boilerplate/theme_hook/content/single/append', array( $this, 'content_single_append' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/page/append', array( $this, 'append_content_page' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/content/single/append', array( $this, 'append_content_single' ) );
 
 		add_action( 'wp_theme_boilerplate/theme_hook/site/header', array( $this, 'header' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/site/header/after', array( $this, 'header_image' ) );
@@ -54,13 +54,13 @@ class Theme_Hook {
 		get_template_part( 'templates/parts/site-info' );
 	}
 
-	public function content_index_prepend() {
+	public function prepend_content_index() {
 		if ( is_home() && ! is_front_page() ) {
 			get_template_part( 'templates/parts/page-header-single-post' );
 		}
 	}
 
-	public function content_archive_prepend() {
+	public function prepend_content_archive() {
 		if ( is_archive() ) {
 			get_template_part( 'templates/parts/page-header-archive' );
 		}
@@ -69,18 +69,18 @@ class Theme_Hook {
 		}
 	}
 
-	public function content_archive_append() {
+	public function append_content_archive() {
 		the_posts_navigation();
 	}
 
-	public function content_page_append() {
+	public function append_content_page() {
 		// If comments are open or we have at least one comment, load up the comment template.
 		if ( comments_open() || get_comments_number() ) {
 			comments_template( '/templates/parts/comments.php', true );
 		}
 	}
 
-	public function content_single_append() {
+	public function append_content_single() {
 		the_post_navigation();
 
 		// If comments are open or we have at least one comment, load up the comment template.
