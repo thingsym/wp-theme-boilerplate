@@ -95,6 +95,7 @@ class Theme {
 					'default-text-color' => '000000',
 					'width'              => 1000,
 					'height'             => 250,
+					'flex-width'         => true,
 					'flex-height'        => true,
 					'wp-head-callback'   => array( 'WP_Theme_Boilerplate\Functions\Custom_Header\Custom_Header', 'header_style' ),
 				)

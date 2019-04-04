@@ -29,6 +29,7 @@ class Theme_Hook {
 		add_action( 'wp_theme_boilerplate/theme_hook/content/single/append', array( $this, 'content_single_append' ) );
 
 		add_action( 'wp_theme_boilerplate/theme_hook/site/header', array( $this, 'header' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/site/header/after', array( $this, 'header_image' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/site/header/after', array( $this, 'global_navi' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/site/footer', array( $this, 'site_info' ) );
 
@@ -39,6 +40,10 @@ class Theme_Hook {
 
 	public function header() {
 		get_template_part( 'templates/parts/site-header' );
+	}
+
+	public function header_image() {
+		get_template_part( 'templates/parts/header-image' );
 	}
 
 	public function global_navi() {
