@@ -43,7 +43,7 @@ fi
 
 if [ -f ./languages/wp-theme-boilerplate.pot ]; then
   mv ./languages/wp-theme-boilerplate.pot ./languages/${THEME_KEBAB}.pot
-  echo "Info: Generated ${THEME_KEBAB}.pot"
+  echo "Info: Rename to ${THEME_KEBAB}.pot"
 fi
 
 find . -type f -name '*.php' -o -name '*.pot' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/WP Theme Boilerplate/${THEME}/g"
