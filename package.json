@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "Next Generation WordPress Theme Starter Kit",
   "homepage": "https://github.com/thingsym/wp-theme-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thingsym/wp-theme-boilerplate"
+  },
   "bugs": {
     "url": "https://github.com/thingsym/wp-theme-boilerplate/issues"
   },
+  "author": "thingsym",
+  "license": "GPL2 or later",
   "devDependencies": {
     "@wordpress/browserslist-config": "^2.2.2",
     "autoprefixer": "^9.4.0",
