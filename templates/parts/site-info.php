@@ -11,5 +11,5 @@
 
 ?>
 <div class="site-info">
-<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'wp-theme-boilerplate' ), 'WordPress' ); ?></a> <?php echo esc_html__( 'Theme by ', 'wp-theme-boilerplate' ); ?><a href="<?php echo esc_url( 'https://wordpress.org/themes/wp-theme-boilerplate/' ); ?>">WP Theme Boilerplate</a>
+<?php echo esc_html__( 'Proudly powered by ', 'wp-theme-boilerplate' ); ?><a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">WordPress</a> | <a href="<?php echo esc_url( 'https://wordpress.org/themes/wp-theme-boilerplate/' ); ?>">WP Theme Boilerplate</a> <?php echo esc_html__( 'Theme by ', 'wp-theme-boilerplate' ); ?><a href="<?php echo esc_url( 'https://wordpress.org/themes/wp-theme-boilerplate/' ); ?>">thingsym</a>
 </div><!-- .site-info -->
