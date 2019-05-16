@@ -14,7 +14,14 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php do_action( 'wp_theme_boilerplate/theme_hook/body/prepend' ); ?>
+<?php
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+}
+else {
+	do_action( 'wp_body_open' );
+}
+?>
 <div class="container">
 <?php do_action( 'wp_theme_boilerplate/theme_hook/site/header/before' ); ?>
 <header class="site-header">
