@@ -293,7 +293,7 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
-### [0.1.0] - 2019.05.18
+### [0.1.0] - 2019.05.19
 
 - initial release
 
