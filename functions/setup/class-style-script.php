@@ -38,7 +38,7 @@ class Style_Script {
 		wp_enqueue_style(
 			'wp-theme-boilerplate',
 			$style_uri,
-			false,
+			array(),
 			wp_get_theme()->get( 'Version' ),
 			'all'
 		);
@@ -76,7 +76,7 @@ class Style_Script {
 		wp_enqueue_style(
 			'wp-theme-boilerplate-block-editor',
 			get_stylesheet_directory_uri() . '/css/block-editor-style.css',
-			false,
+			array(),
 			'1.0',
 			'all'
 		);

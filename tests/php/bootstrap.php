@@ -24,7 +24,8 @@ require_once $_tests_dir . '/includes/functions.php';
  */
 function _register_theme() {
 
-	$theme_dir = dirname( __DIR__ );
+	$test_dir = dirname( __DIR__ );
+	$theme_dir = dirname( $test_dir );
 	$current_theme = basename( $theme_dir );
 	$theme_root = dirname( $theme_dir );
 
