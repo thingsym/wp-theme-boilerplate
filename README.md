@@ -30,6 +30,7 @@ Note: Change folder name to Theme Slug
 ### 2. run Theme Starter script with passing Theme name
 
 Note: Run only once.
+Note: Theme name does case-sensitive.
 
 ```
 cd mytheme
