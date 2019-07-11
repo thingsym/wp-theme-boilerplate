@@ -294,7 +294,13 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
-### [0.1.0] - 2019.05.19
+### [1.1.0] - 2019.07.11
+
+- add Composer autoloader
+- add editor-style.css
+- add test case
+
+### [1.0.0] - 2019.05.19
 
 - initial release
 

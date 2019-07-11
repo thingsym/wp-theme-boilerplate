@@ -4,8 +4,8 @@ Contributors: thingsym
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.7
-Tested up to: 5.1
-Stable tag: 1.0.0
+Tested up to: 5.2
+Stable tag: 1.1.0
 Requires PHP: 5.6
 License: GPL2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -44,7 +44,12 @@ Put long description of your theme. No limit, and you can use Markdown (as well 
 
 == Changelog ==
 
-= 1.0.0 - 2019.03.21 =
+= 1.1.0 - 2019.07.11 =
+* add Composer autoloader
+* add editor-style.css
+* add test case
+
+= 1.0.0 - 2019.05.19 =
 * Initial release
 
 == Resources ==
