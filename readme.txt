@@ -44,7 +44,7 @@ Put long description of your theme. No limit, and you can use Markdown (as well 
 
 == Changelog ==
 
-= 1.0.0 - 2019.03.21 =
+= 1.0.0 - 2019.05.19 =
 * Initial release
 
 == Resources ==
