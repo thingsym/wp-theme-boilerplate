@@ -1,6 +1,6 @@
 {
   "name": "wp-theme-boilerplate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Next Generation WordPress Theme Starter Kit",
   "homepage": "https://github.com/thingsym/wp-theme-boilerplate",
   "repository": {
@@ -27,7 +27,7 @@
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.9.1",
     "stylestats": "^7.0.2",
-    "uglifyjs": "^2.4.11"
+    "uglify-es": "^3.3.9"
   },
   "rtlcssConfig": {
     "options": {

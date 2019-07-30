@@ -294,6 +294,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.1.1] - 2019.07.30
+
+- replace from uglifyjs to uglify-es
+- fix header container
+
 ### [1.1.0] - 2019.07.11
 
 - add Composer autoloader
