@@ -27,7 +27,7 @@
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-scss": "^3.9.1",
     "stylestats": "^7.0.2",
-    "uglifyjs": "^2.4.11"
+    "uglify-es": "^3.3.9"
   },
   "rtlcssConfig": {
     "options": {
