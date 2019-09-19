@@ -294,6 +294,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.1.2] - 2019.09.19
+
+- fix site-info
+- add editor-style.scss
+
 ### [1.1.1] - 2019.07.30
 
 - replace from uglifyjs to uglify-es
