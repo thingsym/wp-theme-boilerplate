@@ -21,7 +21,7 @@ class Theme_Hook {
 		add_action( 'wp_theme_boilerplate/theme_hook/site/header', array( $this, 'header' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/site/header/after', array( $this, 'global_navi' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/site/header/after', array( $this, 'header_image' ) );
-		add_action( 'wp_theme_boilerplate/theme_hook/site/footer', array( $this, 'site_info' ) );
+		add_action( 'wp_theme_boilerplate/theme_hook/site/footer/after', array( $this, 'site_info' ) );
 
 		add_action( 'wp_theme_boilerplate/theme_hook/entry/post_thumbnail', array( $this, 'post_thumbnail' ) );
 		add_action( 'wp_theme_boilerplate/theme_hook/entry/meta/header', array( $this, 'entry_meta_header' ) );
