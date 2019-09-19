@@ -20,7 +20,7 @@ class Test_Theme_Hook extends WP_UnitTestCase {
 		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/site/header', array( $this->theme_hook, 'header' ) ) );
 		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/site/header/after', array( $this->theme_hook, 'global_navi' ) ) );
 		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/site/header/after', array( $this->theme_hook, 'header_image' ) ) );
-		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/site/footer', array( $this->theme_hook, 'site_info' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/site/footer/after', array( $this->theme_hook, 'site_info' ) ) );
 
 		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/entry/post_thumbnail', array( $this->theme_hook, 'post_thumbnail' ) ) );
 		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/entry/meta/header', array( $this->theme_hook, 'entry_meta_header' ) ) );
