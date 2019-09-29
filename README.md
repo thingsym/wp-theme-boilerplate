@@ -294,6 +294,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.2.0] - 2019.09.30
+
+- add Class Editor
+
 ### [1.1.2] - 2019.09.19
 
 - fix site-info
