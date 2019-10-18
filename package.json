@@ -80,7 +80,7 @@
     "sass:block-editor": "node-sass src/scss/block-editor-style.scss css/block-editor-style.css --output-style expanded && postcss --use autoprefixer --no-map -r css/block-editor-style.css",
     "sass:editor-style": "node-sass src/scss/editor-style.scss css/editor-style.css --output-style expanded && postcss --use autoprefixer --no-map -r css/editor-style.css",
     "rtlcss:rtl": "rtlcss css/style.css css/style-rtl.css",
-    "minify:js": "uglifyjs js/customizer.js -o js/customizer.min.js & uglifyjs js/navigation.js -o js/navigation.min.js & uglifyjs js/skip-link-focus-fix.js -o js/skip-link-focus-fix.min.js",
+    "minify:js": "uglifyjs js/customize-preview.js -o js/customizer-preview.min.js & uglifyjs js/navigation.js -o js/navigation.min.js & uglifyjs js/skip-link-focus-fix.js -o js/skip-link-focus-fix.min.js",
     "build:css": "run-p \"sass:**\" \"rtlcss:rtl\"",
     "build:js": "run-p \"minify:js\"",
     "build": "run-p \"build:*\"",

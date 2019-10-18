@@ -64,7 +64,7 @@ class Customizer {
 	public function preview_enqueue_scripts() {
 		wp_enqueue_script(
 			'wp-theme-boilerplate-customizer-preview',
-			get_template_directory_uri() . '/js/customizer.min.js',
+			get_template_directory_uri() . '/js/customizer-preview.min.js',
 			array( 'customize-preview' ),
 			'20151215',
 			true
