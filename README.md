@@ -294,6 +294,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.3.0] - 2019.10.21
+
+- fix test case
+- bundle javascript files
+- add webpack, replace from uglify-es
+- move javascript files to src directory
+- fix error content
+- remove paginated with archive
+
 ### [1.2.0] - 2019.09.30
 
 - add Class Editor

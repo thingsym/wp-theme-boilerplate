@@ -8,12 +8,12 @@
  */
 
 ?>
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Not Found', 'wp-theme-boilerplate' ); ?></h1>
-	</header><!-- .page-header -->
+<header class="page-header">
+<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-theme-boilerplate' ); ?></h1>
+</header><!-- .page-header -->
 
-	<div class="page-content">
+<article class="no-results not-found">
+	<div class="entry-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
@@ -46,5 +46,5 @@
 
 		endif;
 		?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+	</div><!-- .entry-content -->
+</article><!-- .no-results -->

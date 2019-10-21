@@ -6,12 +6,12 @@
  */
 
 ?>
-<section class="error-404 not-found">
 <header class="page-header">
 <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-theme-boilerplate' ); ?></h1>
 </header><!-- .page-header -->
 
-<div class="page-content">
+<article class="error-404 not-found">
+<div class="entry-content">
 <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp-theme-boilerplate' ); ?></p>
 
 <?php
@@ -45,5 +45,5 @@ the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_conte
 the_widget( 'WP_Widget_Tag_Cloud' );
 ?>
 
-</div><!-- .page-content -->
-</section><!-- .error-404 -->
+</div><!-- .entry-content -->
+</article><!-- .error-404 -->
