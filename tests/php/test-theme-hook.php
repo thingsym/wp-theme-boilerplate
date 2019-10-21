@@ -26,14 +26,16 @@ class Test_Theme_Hook extends WP_UnitTestCase {
 		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/entry/meta/header', array( $this->theme_hook, 'entry_meta_header' ) ) );
 		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/entry/meta/footer', array( $this->theme_hook, 'entry_meta_footer' ) ) );
 
-		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/index/prepend', array( $this->theme_hook, 'prepend_content_index' ) ) );
-		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/archive/prepend', array( $this->theme_hook, 'prepend_content_archive' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/index/prepend', array( $this->theme_hook, 'add_page_header' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/archive/prepend', array( $this->theme_hook, 'add_page_header' ) ) );
 
-		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/index/append', array( $this->theme_hook, 'append_content_archive' ) ) );
-		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/archive/append', array( $this->theme_hook, 'append_content_archive' ) ) );
-		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/search/append', array( $this->theme_hook, 'append_content_archive' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/index/append', array( $this->theme_hook, 'add_posts_navigation' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/archive/append', array( $this->theme_hook, 'add_posts_navigation' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/search/append', array( $this->theme_hook, 'add_posts_navigation' ) ) );
 
-		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/page/append', array( $this->theme_hook, 'append_content_page' ) ) );
-		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/single/append', array( $this->theme_hook, 'append_content_single' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/single/append', array( $this->theme_hook, 'add_post_navigation' ) ) );
+
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/page/append', array( $this->theme_hook, 'add_comments' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_theme_boilerplate/theme_hook/content/single/append', array( $this->theme_hook, 'add_comments' ) ) );
 	}
 }

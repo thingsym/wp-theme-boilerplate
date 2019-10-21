@@ -18,6 +18,7 @@ class Test_Customizer extends WP_UnitTestCase {
 	 */
 	public function constructor() {
 		$this->assertEquals( 10, has_filter( 'customize_register', array( $this->customizer, 'customizer' ) ) );
+		$this->assertEquals( 10, has_filter( 'customize_controls_enqueue_scripts', array( $this->customizer, 'control_enqueue_scripts' ) ) );
 		$this->assertEquals( 10, has_filter( 'customize_preview_init', array( $this->customizer, 'preview_enqueue_scripts' ) ) );
 	}
 
@@ -28,6 +29,15 @@ class Test_Customizer extends WP_UnitTestCase {
 	public function preview_enqueue_scripts() {
 		$this->customizer->preview_enqueue_scripts();
 		$this->assertTrue( wp_script_is( 'wp-theme-boilerplate-customizer-preview' ) );
+	}
+
+	/**
+	 * @test
+	 * @group Customizer
+	 */
+	public function control_enqueue_scripts() {
+		$this->customizer->control_enqueue_scripts();
+		$this->assertTrue( wp_script_is( 'wp-theme-boilerplate-customizer-control' ) );
 	}
 
 }
