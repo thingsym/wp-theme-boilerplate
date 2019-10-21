@@ -49,17 +49,9 @@ class Style_Script {
 	 */
 	public function enqueue_scripts() {
 		wp_enqueue_script(
-			'wp-theme-boilerplate-navigation',
-			get_template_directory_uri() . '/js/navigation.min.js',
-			array(),
-			'20151215',
-			true
-		);
-
-		wp_enqueue_script(
-			'wp-theme-boilerplate-skip-link-focus-fix',
-			get_template_directory_uri() . '/js/skip-link-focus-fix.min.js',
-			array(),
+			'wp-theme-boilerplate-bundle',
+			get_template_directory_uri() . '/js/main.bundle.js',
+			array( 'jquery' ),
 			'20151215',
 			true
 		);

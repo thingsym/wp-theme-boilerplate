@@ -16,6 +16,7 @@ namespace WP_Theme_Boilerplate\Functions\Customizer;
 class Customizer {
 	public function __construct() {
 		add_action( 'customize_register', array( $this, 'customizer' ) );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'control_enqueue_scripts' ) );
 		add_action( 'customize_preview_init', array( $this, 'preview_enqueue_scripts' ) );
 	}
 
@@ -61,10 +62,20 @@ class Customizer {
 		bloginfo( 'description' );
 	}
 
+	public function control_enqueue_scripts() {
+		wp_enqueue_script(
+			'wp-theme-boilerplate-customizer-control',
+			get_template_directory_uri() . '/js/customize-control.bundle.js',
+			array(),
+			'20191008',
+			true
+		);
+	}
+
 	public function preview_enqueue_scripts() {
 		wp_enqueue_script(
 			'wp-theme-boilerplate-customizer-preview',
-			get_template_directory_uri() . '/js/admin/customizer-preview.min.js',
+			get_template_directory_uri() . '/js/customize-preview.bundle.js',
 			array( 'customize-preview' ),
 			'20151215',
 			true
