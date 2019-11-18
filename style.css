@@ -2,12 +2,16 @@
 Theme Name: WP Theme Boilerplate
 Theme URI: https://github.com/thingsym/wp-theme-boilerplate
 Description: put your theme description
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 Version: 1.0.0
+Requires at least: 5.0
+Requires PHP: 5.6
 Author: thingsym
 Author URI: https://www.thingslabo.com/
 License: GPL2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 Based: WP Theme Boilerplate v1.3.0 (https://github.com/thingsym/wp-theme-boilerplate)
 Text Domain: wp-theme-boilerplate
+
+All files, unless otherwise stated, are released under the GNU General Public License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 */
