@@ -93,8 +93,8 @@ class Theme {
 				array(
 					'default-image'      => '',
 					'default-text-color' => '000000',
-					'width'              => 1000,
-					'height'             => 250,
+					'width'              => 1280,
+					'height'             => 480,
 					'flex-width'         => true,
 					'flex-height'        => true,
 					'wp-head-callback'   => array( 'WP_Theme_Boilerplate\Functions\Custom_Header\Custom_Header', 'header_style' ),
@@ -113,8 +113,8 @@ class Theme {
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
+				'height'      => 320,
+				'width'       => 120,
 				'flex-width'  => true,
 				'flex-height' => true,
 				'header-text' => array(
