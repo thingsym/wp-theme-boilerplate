@@ -130,7 +130,7 @@
     "webpack": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
     "build:css": "run-p sass:** rtlcss:rtl",
     "build:js": "run-p webpack",
-    "build": "run-p build:*",
+    "build": "run-p build:* msgfmt",
     "lint:css": "stylelint \"css/*.css\" \"css/**/*.css\"",
     "lint:scss": "stylelint \"src/scss/*.scss\" \"src/scss/**/*.scss\"",
     "lint:es": "eslint js/*.js",
