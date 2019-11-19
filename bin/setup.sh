@@ -53,8 +53,8 @@ find . -type f -name '*.php' -not -iwholename './.git/*' -not -iwholename './nod
 find . -type f -name '*.php' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/'wp-theme-boilerplate'/'${THEME_KEBAB}'/g"
 find . -type f -name '*.php' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/wp-theme-boilerplate-/${THEME_KEBAB}-/g"
 
-find . -type f -name 'site-info.php' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/https:\/\/wordpress.org\/themes\/wp-theme-boilerplate\//https:\/\/wordpress.org\/themes\/${THEME_KEBAB}\//g"
-find . -type f -name 'site-info.php' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/thingsym/Author/g"
+find . -type f -name 'theme-info.php' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/https:\/\/wordpress.org\/themes\/wp-theme-boilerplate\//https:\/\/wordpress.org\/themes\/${THEME_KEBAB}\//g"
+find . -type f -name 'theme-info.php' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/thingsym/Author/g"
 
 find . -type f -name 'style.css' -o -name 'rtl.css' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/Theme Name: WP Theme Boilerplate/Theme Name: ${THEME}/g"
 find . -type f -name 'style.css' -not -iwholename './.git/*' -not -iwholename './node_modules/*' -not -iwholename './vendor/*' | xargs sed -i "s/Text Domain: wp-theme-boilerplate/Text Domain: ${THEME_KEBAB}/g"
