@@ -3,7 +3,7 @@
 Contributors: thingsym
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
-Requires at least: 4.7
+Requires at least: 5.0
 Tested up to: 5.2
 Stable tag: 1.0.0
 Requires PHP: 5.6

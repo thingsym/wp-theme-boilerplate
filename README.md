@@ -8,7 +8,7 @@ Next Generation WordPress Theme Starter Kit
 * Implement **WordPress Theme Autoloader**
 * Implement class based theme functions
 * Implement **Theme hooks**
-* Support Block Editor [Gutenberg](https://github.com/WordPress/gutenberg)
+* Support the Block Editor [Gutenberg](https://github.com/WordPress/gutenberg)
 * Generate your starter theme on **Theme Starter script**
 * Theme development environment on **npm scripts**
 * Theme testing environment on **composer scripts**
@@ -29,7 +29,7 @@ Note: Change folder name to Theme Slug
 
 ### 2. run Theme Starter script with passing Theme name
 
-Note: Run only once.
+Note: Run only once.  
 Note: Theme name does case-sensitive.
 
 ```
@@ -67,6 +67,8 @@ npm install
 
 ## Requirements
 
+* [WordPress](https://wordpress.org/) 5.0+
+* [PHP](https://www.php.net/) 5.6+
 * [Node.js](https://nodejs.org/)
 * [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 * [Composer](https://getcomposer.org/)
@@ -91,6 +93,11 @@ npm install
 |    |- uninstall-wp-tests.sh     # uninstall script for WordPress testing environment
 |
 |- css/                     # stylesheet files
+|    |- block-editor-style.css
+|    |- editor-style.css
+|    |- style-rtl.css
+|    |- style.css
+|    |- style.min.css
 |
 |- functions/               # PHP classes and functional php files
 |    |- custom-header/
@@ -110,6 +117,7 @@ npm install
 |- node_modules/            # npm modules
 |
 |- src/                     # assets for development
+|    |- js/               # javascript files
 |    |- scss/               # scss files
 |
 |- templates/               # template files and partial files
@@ -128,6 +136,7 @@ npm install
 |- .travis.yml
 |- composer.json            # Composer package file for theme testing and using PHP libraries
 |- functions.php            # WordPress functionality file
+|- index.php                # WordPress file
 |- LICENSE                  # LICENSE file
 |- package.json             # npm package file for theme development
 |- phpcs.ruleset.xml        # PHP_CodeSniffer config settings
@@ -136,9 +145,9 @@ npm install
 |- phpunit.xml              # PHPUnit config settings
 |- README.md                # this file
 |- readme.txt               # theme readme file for your starter theme
-|- rtl.css                  # stylesheet file for Right-To-Left languages
 |- screenshot.png           # Screenshot image file
 |- style.css                # main stylesheet file, only theme header
+|- webpack.config.js        # webpack config settings
 ```
 
 ## Template hierarchical
@@ -232,13 +241,14 @@ npm run <task>
 * sass:style:minify
 * sass:block-editor
 * rtlcss:rtl
-* minify:js
+* webpack
 * build:css
 * build:js
 * build
 * lint:css
 * lint:scss
 * lint:es
+* lint:es:fix
 * lint
 * stats:css
 * bs:server
@@ -249,6 +259,9 @@ npm run <task>
 * watch:js
 * watch
 * server
+* archive:package
+* archive:zip
+* archive
 
 ## Theme testing environment
 
@@ -293,6 +306,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 5. Create new Pull Request
 
 ## Changelog
+
+### [1.4.0] - 2019.11.19
+
+- fix Theme Starter script
+- add style-rtl.css
+- update .pot
+- fix Requires at least to 5.0
+- fix header image and logo image size
+- add archive script with npm script
 
 ### [1.3.0] - 2019.10.21
 

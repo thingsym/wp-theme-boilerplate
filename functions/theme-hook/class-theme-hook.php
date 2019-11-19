@@ -53,7 +53,7 @@ class Theme_Hook {
 	}
 
 	public function site_info() {
-		get_template_part( 'templates/parts/site-info' );
+		get_template_part( 'templates/parts/theme-info' );
 	}
 
 	public function post_thumbnail() {
