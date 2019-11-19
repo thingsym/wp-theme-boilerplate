@@ -42,6 +42,25 @@ class Style_Script {
 			wp_get_theme()->get( 'Version' ),
 			'all'
 		);
+
+		if ( is_rtl() ) {
+			$style_rtl_uri = get_stylesheet_directory() . 'style-rtl.min.css';
+
+			if ( is_dir( get_stylesheet_directory() . '/css' ) && is_file( get_stylesheet_directory() . '/css/style-rtl.min.css' ) ) {
+				$style_rtl_uri = get_stylesheet_directory_uri() . '/css/style-rtl.min.css';
+			}
+			elseif ( is_dir( get_stylesheet_directory() . '/css' ) && is_file( get_stylesheet_directory() . '/css/style-rtl.css' ) ) {
+				$style_rtl_uri = get_stylesheet_directory_uri() . '/css/style-rtl.css';
+			}
+
+			wp_enqueue_style(
+				'wp-theme-boilerplate-rtl',
+				$style_rtl_uri,
+				array(),
+				wp_get_theme()->get( 'Version' ),
+				'all'
+			);
+		}
 	}
 
 	/**
