@@ -14,12 +14,12 @@
     "phpcs": "phpcs -p -s -v -n ./ --standard=./phpcs.ruleset.xml --extensions=php",
     "phpcs:warning": "phpcs -p -s -v ./ --standard=./phpcs.ruleset.xml --extensions=php",
     "phpcbf": "phpcbf -p -s -v ./ --standard=./phpcs.ruleset.xml --extensions=php",
-    "phpmd": "phpmd ./ text ./phpmd.ruleset.xml --suffixes php --exclude /tests,/vendor",
+    "phpmd": "phpmd ./ text ./phpmd.ruleset.xml --suffixes php --exclude /tests,/vendor,/node_modules",
     "phpstan": "phpstan analyse",
     "phpunit": "phpunit",
     "ci": [
       "phpcs -p -s -v -n ./ --standard=./phpcs.ruleset.xml --extensions=php",
-      "phpmd ./ text ./phpmd.ruleset.xml --suffixes php --exclude /tests,/vendor",
+      "phpmd ./ text ./phpmd.ruleset.xml --suffixes php --exclude /tests,/vendor,/node_modules",
       "phpunit"
     ]
   }
