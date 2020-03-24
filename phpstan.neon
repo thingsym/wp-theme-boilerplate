@@ -1,8 +1,9 @@
 parameters:
   level: max
-  paths: 
+  paths:
     - ./
   excludes_analyse:
     - ./tests
     - ./vendor
+    - ./node_modules
   autoload_files: []

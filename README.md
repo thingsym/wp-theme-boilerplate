@@ -122,6 +122,7 @@ npm install
 |
 |- templates/               # template files and partial files
 |    |- content/            # content part files
+|    |- page-header/            # page header part files
 |    |- parts/              # partial files
 |    |- sidebar/            # sidebar part files
 |
@@ -248,7 +249,7 @@ npm run <task>
 * lint:css
 * lint:scss
 * lint:es
-* lint:es:fix
+* lint\:es\:fix
 * lint
 * stats:css
 * bs:server
@@ -306,6 +307,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 5. Create new Pull Request
 
 ## Changelog
+
+### [1.5.0] - 2020.03.24
+
+- move template parts files to page-header dir
+- add non minified javascript files for theme review
+- change javascript files bundle from webpack to minify
+- move javascript files	to src/javascript/main directory
+- exclude node_modules in test scope
+- remove README.md in zip archive
 
 ### [1.4.0] - 2019.11.19
 
