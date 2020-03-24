@@ -308,6 +308,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.5.0] - 2020.03.24
+
+- move template parts files to page-header dir
+- add non minified javascript files for theme review
+- change javascript files bundle from webpack to minify
+- move javascript files	to src/javascript/main directory
+- exclude node_modules in test scope
+- remove README.md in zip archive
+
 ### [1.4.0] - 2019.11.19
 
 - fix Theme Starter script
