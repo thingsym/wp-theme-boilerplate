@@ -69,7 +69,7 @@ class Style_Script {
 	public function enqueue_scripts() {
 		wp_enqueue_script(
 			'wp-theme-boilerplate-bundle',
-			get_template_directory_uri() . '/js/main.bundle.js',
+			get_template_directory_uri() . '/js/main.min.js',
 			array( 'jquery' ),
 			'20151215',
 			true
