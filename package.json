@@ -145,7 +145,7 @@
     "watch:js": "chokidar \"src/js/*.js\" \"src/js/**/*.js\" -c \"npm run build:js\" --initial --polling",
     "watch": "run-p watch:*",
     "server": "run-p watch bs:proxy:watch",
-    "archive:package": "mkdir -p ./wp-theme-boilerplate && cpy '**/*' '!./bin' '!./composer.json' '!./gulpfile.js' '!./node_modules' '!./package.json' '!./package-lock.json' '!./phpcs.ruleset.xml' '!./phpmd.ruleset.xml' '!./phpstan.neon' '!./phpunit.xml' '!./webpack.config.js' '!./src' '!./tests' '!./wp-theme-boilerplate.zip' './wp-theme-boilerplate' --parents",
+    "archive:package": "mkdir -p ./wp-theme-boilerplate && cpy '**/*' '!./README.md' '!./.DS_Store' '!./bin' '!./vendor' '!./composer.json' '!./composer.lock' '!./node_modules' '!./package.json' '!./package-lock.json' '!./phpcs.ruleset.xml' '!./phpmd.ruleset.xml' '!./phpstan.neon' '!./phpunit.xml' '!./webpack.config.js' '!./src' '!./tests' '!./wp-theme-boilerplate.zip' './wp-theme-boilerplate' --parents",
     "archive:zip": "zip -9 -qmr wp-theme-boilerplate.zip ./wp-theme-boilerplate",
     "archive": "run-s build archive:package archive:zip"
   }
