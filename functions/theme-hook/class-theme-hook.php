@@ -70,13 +70,13 @@ class Theme_Hook {
 
 	public function add_page_header() {
 		if ( is_home() && ! is_front_page() ) {
-			get_template_part( 'templates/parts/page-header-single-post' );
+			get_template_part( 'templates/page-header/single-post' );
 		}
 		elseif ( is_archive() ) {
-			get_template_part( 'templates/parts/page-header-archive' );
+			get_template_part( 'templates/page-header/archive' );
 		}
 		elseif ( is_search() ) {
-			get_template_part( 'templates/parts/page-header-search' );
+			get_template_part( 'templates/page-header/search' );
 		}
 	}
 
