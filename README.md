@@ -122,6 +122,7 @@ npm install
 |
 |- templates/               # template files and partial files
 |    |- content/            # content part files
+|    |- page-header/            # page header part files
 |    |- parts/              # partial files
 |    |- sidebar/            # sidebar part files
 |
@@ -248,7 +249,7 @@ npm run <task>
 * lint:css
 * lint:scss
 * lint:es
-* lint:es:fix
+* lint\:es\:fix
 * lint
 * stats:css
 * bs:server
