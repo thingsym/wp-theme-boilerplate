@@ -128,7 +128,7 @@ npm install
 |
 |- tests/                   # testing suite files
 |    |- js/                 # Javascript testing suite
-|    |- php/                # PHP testing suite
+|    |- phpunit/            # PHP testing suite
 |
 |- vendor/                  # Composer dependencies
 |
@@ -243,8 +243,12 @@ npm run <task>
 * sass:block-editor
 * rtlcss:rtl
 * webpack
+* terser:js
+* concat:js
 * build:css
 * build:js
+* build:js:deprecated
+* build:i18n
 * build
 * lint:css
 * lint:scss
@@ -308,6 +312,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.6.0] - 2020.04.23
+
+- fix css header
+- fix npm scripts
+- fix setup.sh
+- move test case directory
+- bump up phpunit version 7.x
+- add version number with zip archive
+
 ### [1.5.0] - 2020.03.24
 
 - move template parts files to page-header dir
@@ -367,4 +380,4 @@ Licensed under [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
 [thingsym](https://github.com/thingsym)
 
-Copyright (c) 2019 by thingsym
+Copyright (c) 2019-2020 by thingsym

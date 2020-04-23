@@ -6,4 +6,5 @@ parameters:
     - ./tests
     - ./vendor
     - ./node_modules
-  autoload_files: []
+  autoload_files:
+    - ./tests/phpunit/bootstrap.php

@@ -1,6 +1,6 @@
 {
   "name": "wp-theme-boilerplate",
-  "version": "1.5.0-based",
+  "version": "1.6.0-based",
   "description": "Next Generation WordPress Theme Starter Kit",
   "homepage": "https://github.com/thingsym/wp-theme-boilerplate",
   "repository": {
@@ -25,6 +25,7 @@
     "concat": "^1.0.3",
     "cpy-cli": "^3.1.0",
     "cross-env": "^7.0.2",
+    "cross-var": "^1.1.0",
     "eslint": "^6.8.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
@@ -135,7 +136,8 @@
     "build:css": "run-p sass:** rtlcss:rtl",
     "build:js": "run-p terser:js concat:js",
     "build:js:deprecated": "run-p webpack",
-    "build": "run-p build:* msgfmt",
+    "build:i18n": "run-p msgfmt:*",
+    "build": "run-p build:*",
     "lint:css": "stylelint \"css/*.css\" \"css/**/*.css\"",
     "lint:scss": "stylelint \"src/scss/*.scss\" \"src/scss/**/*.scss\"",
     "lint:es": "eslint js/*.js",
@@ -151,7 +153,7 @@
     "watch": "run-p watch:*",
     "server": "run-p watch bs:proxy:watch",
     "archive:package": "mkdir -p ./wp-theme-boilerplate && cpy '**/*' '!./README.md' '!./.DS_Store' '!./bin' '!./vendor' '!./composer.json' '!./composer.lock' '!./node_modules' '!./package.json' '!./package-lock.json' '!./phpcs.ruleset.xml' '!./phpmd.ruleset.xml' '!./phpstan.neon' '!./phpunit.xml' '!./webpack.config.js' '!./src' '!./tests' '!./wp-theme-boilerplate.zip' './wp-theme-boilerplate' --parents",
-    "archive:zip": "zip -9 -qmr wp-theme-boilerplate.zip ./wp-theme-boilerplate",
+    "archive:zip": "zip -9 -qmr wp-theme-boilerplate-v$npm_package_version.zip ./wp-theme-boilerplate",
     "archive": "run-s build archive:package archive:zip"
   }
 }
