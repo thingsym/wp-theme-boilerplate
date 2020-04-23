@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <phpunit
-	bootstrap="tests/php/bootstrap.php"
+	bootstrap="tests/phpunit/bootstrap.php"
 	backupGlobals="false"
 	colors="true"
 	convertErrorsToExceptions="true"

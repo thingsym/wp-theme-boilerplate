@@ -128,7 +128,7 @@ npm install
 |
 |- tests/                   # testing suite files
 |    |- js/                 # Javascript testing suite
-|    |- php/                # PHP testing suite
+|    |- phpunit/            # PHP testing suite
 |
 |- vendor/                  # Composer dependencies
 |
