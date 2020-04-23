@@ -1,14 +1,13 @@
 === WP Theme Boilerplate ===
 
 Contributors: thingsym
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-Requires at least: 5.0
-Tested up to: 5.2
 Stable tag: 1.0.0
+Tested up to: 5.2
+Requires at least: 5.0
 Requires PHP: 5.6
 License: GPL2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Put short description of your theme. This should be no more than 150 characters. No markup here
 

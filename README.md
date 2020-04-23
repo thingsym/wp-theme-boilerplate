@@ -243,8 +243,12 @@ npm run <task>
 * sass:block-editor
 * rtlcss:rtl
 * webpack
+* terser:js
+* concat:js
 * build:css
 * build:js
+* build:js:deprecated
+* build:i18n
 * build
 * lint:css
 * lint:scss
@@ -367,4 +371,4 @@ Licensed under [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
 [thingsym](https://github.com/thingsym)
 
-Copyright (c) 2019 by thingsym
+Copyright (c) 2019-2020 by thingsym
