@@ -17,9 +17,9 @@ class Test_Setup_Style_Script extends WP_UnitTestCase {
 	 * @group Style_Script
 	 */
 	public function constructor() {
-		$this->assertEquals( 10, has_filter( 'wp_enqueue_scripts', array( $this->style_script, 'enqueue_styles' ) ) );
-		$this->assertEquals( 10, has_filter( 'wp_enqueue_scripts', array( $this->style_script, 'enqueue_scripts' ) ) );
-		$this->assertEquals( 10, has_filter( 'enqueue_block_editor_assets', array( $this->style_script, 'block_editor_styles' ) ) );
+		$this->assertEquals( 10, has_filter( 'wp_enqueue_scripts', [ $this->style_script, 'enqueue_styles' ] ) );
+		$this->assertEquals( 10, has_filter( 'wp_enqueue_scripts', [ $this->style_script, 'enqueue_scripts' ] ) );
+		$this->assertEquals( 10, has_filter( 'enqueue_block_editor_assets', [ $this->style_script, 'block_editor_styles' ] ) );
 	}
 
 	/**

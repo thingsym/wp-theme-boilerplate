@@ -17,7 +17,7 @@ class Test_Setup_Menu extends WP_UnitTestCase {
 	 * @group Menu
 	 */
 	public function constructor() {
-		$this->assertEquals( 10, has_filter( 'after_setup_theme', array( $this->menu, 'init' ) ) );
+		$this->assertEquals( 10, has_filter( 'after_setup_theme', [ $this->menu, 'init' ] ) );
 	}
 
 }

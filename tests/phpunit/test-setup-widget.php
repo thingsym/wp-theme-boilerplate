@@ -17,7 +17,7 @@ class Test_Setup_Widget extends WP_UnitTestCase {
 	 * @group Widget
 	 */
 	public function constructor() {
-		$this->assertEquals( 10, has_filter( 'widgets_init', array( $this->widget, 'init' ) ) );
+		$this->assertEquals( 10, has_filter( 'widgets_init', [ $this->widget, 'init' ] ) );
 	}
 
 }

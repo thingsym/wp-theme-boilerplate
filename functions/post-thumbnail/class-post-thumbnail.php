@@ -34,13 +34,13 @@ class Post_Thumbnail {
 			<?php
 			the_post_thumbnail(
 				'post-thumbnail',
-				array(
+				[
 					'alt' => the_title_attribute(
-						array(
+						[
 							'echo' => false,
-						)
+						]
 					),
-				)
+				]
 			);
 			?>
 </a>

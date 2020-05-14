@@ -169,7 +169,7 @@ For example, the template hierarchy of the top page is as follows:
 Theme hooks adds an action through the `add_action` function.
 
 ```
-add_action( 'wp_theme_boilerplate/theme_hook/site/header', array( $this, 'header' ) );
+add_action( 'wp_theme_boilerplate/theme_hook/site/header', [ $this, 'header' ] );
 ```
 
 Note: Replace `wp_theme_boilerplate` with `your_theme_slug`

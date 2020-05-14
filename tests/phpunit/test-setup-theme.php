@@ -17,9 +17,9 @@ class Test_Setup_Theme extends WP_UnitTestCase {
 	 * @group Theme
 	 */
 	public function constructor() {
-		$this->assertEquals( 10, has_filter( 'after_setup_theme', array( $this->theme, 'setup' ) ) );
-		$this->assertEquals( 0, has_filter( 'after_setup_theme', array( $this->theme, 'content_width' ) ) );
-		$this->assertEquals( 0, has_filter( 'wp_head', array( $this->theme, 'print_meta' ) ) );
+		$this->assertEquals( 10, has_filter( 'after_setup_theme', [ $this->theme, 'setup' ] ) );
+		$this->assertEquals( 0, has_filter( 'after_setup_theme', [ $this->theme, 'content_width' ] ) );
+		$this->assertEquals( 0, has_filter( 'wp_head', [ $this->theme, 'print_meta' ] ) );
 	}
 
 }
