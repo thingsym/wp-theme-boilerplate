@@ -312,6 +312,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.7.0] - 2020.05.14
+
+- replace array() to short array syntax []
+
 ### [1.6.0] - 2020.04.23
 
 - fix css header
