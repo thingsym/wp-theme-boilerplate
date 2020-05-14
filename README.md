@@ -312,6 +312,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.6.0] - 2020.04.23
+
+- fix css header
+- fix npm scripts
+- fix setup.sh
+- move test case directory
+- bump up phpunit version 7.x
+- add version number with zip archive
+
 ### [1.5.0] - 2020.03.24
 
 - move template parts files to page-header dir
