@@ -16,9 +16,9 @@ namespace WP_Theme_Boilerplate\Functions\Setup;
 class Style_Script {
 
 	public function __construct() {
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-		add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_styles' ) );
+		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_styles' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+		add_action( 'enqueue_block_editor_assets', [ $this, 'block_editor_styles' ] );
 	}
 
 	/**
@@ -38,7 +38,7 @@ class Style_Script {
 		wp_enqueue_style(
 			'wp-theme-boilerplate',
 			$style_uri,
-			array(),
+			[],
 			wp_get_theme()->get( 'Version' ),
 			'all'
 		);
@@ -56,7 +56,7 @@ class Style_Script {
 			wp_enqueue_style(
 				'wp-theme-boilerplate-rtl',
 				$style_rtl_uri,
-				array(),
+				[],
 				wp_get_theme()->get( 'Version' ),
 				'all'
 			);
@@ -70,7 +70,7 @@ class Style_Script {
 		wp_enqueue_script(
 			'wp-theme-boilerplate-bundle',
 			get_template_directory_uri() . '/js/main.min.js',
-			array( 'jquery' ),
+			[ 'jquery' ],
 			'20151215',
 			true
 		);
@@ -87,7 +87,7 @@ class Style_Script {
 		wp_enqueue_style(
 			'wp-theme-boilerplate-block-editor',
 			get_stylesheet_directory_uri() . '/css/block-editor-style.css',
-			array(),
+			[],
 			'1.0',
 			'all'
 		);

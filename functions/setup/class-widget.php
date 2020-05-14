@@ -16,7 +16,7 @@ namespace WP_Theme_Boilerplate\Functions\Setup;
 class Widget {
 
 	public function __construct() {
-		add_action( 'widgets_init', array( $this, 'init' ) );
+		add_action( 'widgets_init', [ $this, 'init' ] );
 	}
 
 	/**
@@ -29,7 +29,7 @@ class Widget {
 	public function init() {
 
 		register_sidebar(
-			array(
+			[
 				'name'          => esc_html__( 'Sidebar', 'wp-theme-boilerplate' ),
 				'id'            => 'sidebar-1',
 				'description'   => esc_html__( 'Add widgets here.', 'wp-theme-boilerplate' ),
@@ -37,7 +37,7 @@ class Widget {
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
 				'after_title'   => '</h2>',
-			)
+			]
 		);
 
 	}

@@ -169,7 +169,7 @@ For example, the template hierarchy of the top page is as follows:
 Theme hooks adds an action through the `add_action` function.
 
 ```
-add_action( 'wp_theme_boilerplate/theme_hook/site/header', array( $this, 'header' ) );
+add_action( 'wp_theme_boilerplate/theme_hook/site/header', [ $this, 'header' ] );
 ```
 
 Note: Replace `wp_theme_boilerplate` with `your_theme_slug`
@@ -311,6 +311,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 5. Create new Pull Request
 
 ## Changelog
+
+### [1.7.0] - 2020.05.14
+
+- replace array() to short array syntax []
 
 ### [1.6.0] - 2020.04.23
 

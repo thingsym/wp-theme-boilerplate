@@ -15,7 +15,7 @@ namespace WP_Theme_Boilerplate\Functions\Setup;
  */
 class Editor {
 	public function __construct() {
-		add_action( 'after_setup_theme', array( $this, 'block_editor_settings' ) );
+		add_action( 'after_setup_theme', [ $this, 'block_editor_settings' ] );
 	}
 
 	/**

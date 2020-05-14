@@ -17,9 +17,9 @@ class Theme {
 	protected $hook_prefix = 'wp_theme_boilerplate/functions/setup/';
 
 	public function __construct() {
-		add_action( 'after_setup_theme', array( $this, 'setup' ) );
-		add_action( 'after_setup_theme', array( $this, 'content_width' ), 0 );
-		add_action( 'wp_head', array( $this, 'print_meta' ), 0 );
+		add_action( 'after_setup_theme', [ $this, 'setup' ] );
+		add_action( 'after_setup_theme', [ $this, 'content_width' ], 0 );
+		add_action( 'wp_head', [ $this, 'print_meta' ], 0 );
 	}
 
 	/**
@@ -64,13 +64,13 @@ class Theme {
 		 */
 		add_theme_support(
 			'html5',
-			array(
+			[
 				'search-form',
 				'comment-form',
 				'comment-list',
 				'gallery',
 				'caption',
-			)
+			]
 		);
 
 		// Set up the WordPress core custom background feature.
@@ -78,10 +78,10 @@ class Theme {
 			'custom-background',
 			apply_filters(
 				$this->hook_prefix . 'custom-background/args',
-				array(
+				[
 					'default-color' => 'ffffff',
 					'default-image' => '',
-				)
+				]
 			)
 		);
 
@@ -90,15 +90,15 @@ class Theme {
 			'custom-header',
 			apply_filters(
 				$this->hook_prefix . 'custom-header/args',
-				array(
+				[
 					'default-image'      => '',
 					'default-text-color' => '000000',
 					'width'              => 1280,
 					'height'             => 480,
 					'flex-width'         => true,
 					'flex-height'        => true,
-					'wp-head-callback'   => array( 'WP_Theme_Boilerplate\Functions\Custom_Header\Custom_Header', 'header_style' ),
-				)
+					'wp-head-callback'   => [ 'WP_Theme_Boilerplate\Functions\Custom_Header\Custom_Header', 'header_style' ],
+				]
 			)
 		);
 
@@ -112,16 +112,16 @@ class Theme {
 		 */
 		add_theme_support(
 			'custom-logo',
-			array(
+			[
 				'height'      => 320,
 				'width'       => 120,
 				'flex-width'  => true,
 				'flex-height' => true,
-				'header-text' => array(
+				'header-text' => [
 					'site-title',
 					'site-description',
-				),
-			)
+				],
+			]
 		);
 
 		// Add support for editor styles.

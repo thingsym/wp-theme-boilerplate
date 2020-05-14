@@ -15,9 +15,9 @@ namespace WP_Theme_Boilerplate\Functions\Customizer;
  */
 class Customizer {
 	public function __construct() {
-		add_action( 'customize_register', array( $this, 'customizer' ) );
-		add_action( 'customize_controls_enqueue_scripts', array( $this, 'control_enqueue_scripts' ) );
-		add_action( 'customize_preview_init', array( $this, 'preview_enqueue_scripts' ) );
+		add_action( 'customize_register', [ $this, 'customizer' ] );
+		add_action( 'customize_controls_enqueue_scripts', [ $this, 'control_enqueue_scripts' ] );
+		add_action( 'customize_preview_init', [ $this, 'preview_enqueue_scripts' ] );
 	}
 
 	public function customizer( $wp_customize ) {
@@ -28,18 +28,18 @@ class Customizer {
 		if ( isset( $wp_customize->selective_refresh ) ) {
 			$wp_customize->selective_refresh->add_partial(
 				'blogname',
-				array(
+				[
 					'selector'        => '.site-title a',
-					'render_callback' => array( $this, 'render_partial_blogname' ),
-				)
+					'render_callback' => [ $this, 'render_partial_blogname' ],
+				]
 			);
 
 			$wp_customize->selective_refresh->add_partial(
 				'blogdescription',
-				array(
+				[
 					'selector'        => '.site-description',
-					'render_callback' => array( $this, 'render_partial_blogdescription' ),
-				)
+					'render_callback' => [ $this, 'render_partial_blogdescription' ],
+				]
 			);
 		}
 	}
@@ -66,7 +66,7 @@ class Customizer {
 		wp_enqueue_script(
 			'wp-theme-boilerplate-customizer-control',
 			get_template_directory_uri() . '/js/customize-control.min.js',
-			array(),
+			[],
 			'20191008',
 			true
 		);
@@ -76,7 +76,7 @@ class Customizer {
 		wp_enqueue_script(
 			'wp-theme-boilerplate-customizer-preview',
 			get_template_directory_uri() . '/js/customize-preview.min.js',
-			array( 'customize-preview' ),
+			[ 'customize-preview' ],
 			'20151215',
 			true
 		);
