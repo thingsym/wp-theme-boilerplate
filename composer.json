@@ -18,9 +18,10 @@
     "phpstan": "phpstan analyse",
     "phpunit": "phpunit",
     "ci": [
-      "phpcs -p -s -v -n ./ --standard=./phpcs.ruleset.xml --extensions=php",
-      "phpmd ./ text ./phpmd.ruleset.xml --suffixes php --exclude /tests,/vendor,/node_modules",
-      "phpunit"
+        "@phpunit",
+        "@phpcs",
+        "@phpmd",
+        "@phpstan"
     ]
   }
 }
