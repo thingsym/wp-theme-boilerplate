@@ -29,7 +29,7 @@ Note: Change folder name to Theme Slug
 
 ### 2. run Theme Starter script with passing Theme name
 
-Note: Run only once.  
+Note: Run only once.
 Note: Theme name does case-sensitive.
 
 ```shell
@@ -320,6 +320,12 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 5. Create new Pull Request
 
 ## Changelog
+
+### [1.8.0] - 2020.08.10
+
+* update package.json
+* assign object to variable for child theme
+* fix hooks priority
 
 ### [1.7.0] - 2020.05.14
 
