@@ -18,8 +18,8 @@ class Test_Setup_Theme extends WP_UnitTestCase {
 	 */
 	public function constructor() {
 		$this->assertEquals( 10, has_filter( 'after_setup_theme', [ $this->theme, 'setup' ] ) );
-		$this->assertEquals( 0, has_filter( 'after_setup_theme', [ $this->theme, 'content_width' ] ) );
-		$this->assertEquals( 0, has_filter( 'wp_head', [ $this->theme, 'print_meta' ] ) );
+		$this->assertEquals( 10, has_filter( 'after_setup_theme', [ $this->theme, 'content_width' ] ) );
+		$this->assertEquals( 1, has_filter( 'wp_head', [ $this->theme, 'print_meta' ] ) );
 	}
 
 }
