@@ -17,7 +17,7 @@ Next Generation WordPress Theme Starter Kit
 
 ### 1. clone WP Theme Boilerplate with change directory name to Theme Slug
 
-```
+```shell
 git clone https://github.com/thingsym/wp-theme-boilerplate.git mytheme
 ```
 
@@ -32,7 +32,7 @@ Note: Change folder name to Theme Slug
 Note: Run only once.  
 Note: Theme name does case-sensitive.
 
-```
+```shell
 cd mytheme
 
 bash bin/setup.sh --theme 'Mytheme'
@@ -40,17 +40,19 @@ bash bin/setup.sh --theme 'Mytheme'
 
 or (via npm)
 
-```
+```shell
 npm run setup -- --theme 'Mytheme'
 ```
 
 ### 3. delete `bin/setup.sh`
+
 ### 4. update the theme header in `style.css`
+
 ### 5. update or delete `README.md`
 
 ### 6. create Git repository and first commit
 
-```
+```shell
 git init
 git add .
 git commit -m "initial commit"
@@ -58,12 +60,13 @@ git commit -m "initial commit"
 
 ### 7. build Theme development environment
 
-```
+```shell
 npm install
 ```
 
 ### 8. make your WordPress theme
-### 9. Good luck!
+
+### 9. Good luck
 
 ## Requirements
 
@@ -85,7 +88,7 @@ npm install
 
 ## Directory Layout
 
-```
+```console
 |- bin/                           # scripts
 |    |- setup.sh                  # Theme Starter script
 |    |- install-wp-tests.sh       # install script for WordPress testing environment
@@ -125,6 +128,12 @@ npm install
 |    |- page-header/            # page header part files
 |    |- parts/              # partial files
 |    |- sidebar/            # sidebar part files
+|    |- 404.php
+|    |- archive.php
+|    |- index.php
+|    |- page.php
+|    |- search.php
+|    |- single.php
 |
 |- tests/                   # testing suite files
 |    |- js/                 # Javascript testing suite
@@ -168,7 +177,7 @@ For example, the template hierarchy of the top page is as follows:
 
 Theme hooks adds an action through the `add_action` function.
 
-```
+```php
 add_action( 'wp_theme_boilerplate/theme_hook/site/header', [ $this, 'header' ] );
 ```
 
@@ -176,31 +185,31 @@ Note: Replace `wp_theme_boilerplate` with `your_theme_slug`
 
 ### Site
 
-- `your_theme_slug`/theme_hook/site/header/before
-- `your_theme_slug`/theme_hook/site/header
-- `your_theme_slug`/theme_hook/site/header/after
-- `your_theme_slug`/theme_hook/site/content/before
-- `your_theme_slug`/theme_hook/site/content/after
-- `your_theme_slug`/theme_hook/site/footer/before
-- `your_theme_slug`/theme_hook/site/footer
-- `your_theme_slug`/theme_hook/site/footer/after
+* `your_theme_slug`/theme_hook/site/header/before
+* `your_theme_slug`/theme_hook/site/header
+* `your_theme_slug`/theme_hook/site/header/after
+* `your_theme_slug`/theme_hook/site/content/before
+* `your_theme_slug`/theme_hook/site/content/after
+* `your_theme_slug`/theme_hook/site/footer/before
+* `your_theme_slug`/theme_hook/site/footer
+* `your_theme_slug`/theme_hook/site/footer/after
 
 ### Content
 
-- `your_theme_slug`/theme_hook/content/prepend
-- `your_theme_slug`/theme_hook/content/append
-- `your_theme_slug`/theme_hook/content/index/prepend
-- `your_theme_slug`/theme_hook/content/index/append
-- `your_theme_slug`/theme_hook/content/page/prepend
-- `your_theme_slug`/theme_hook/content/page/append
-- `your_theme_slug`/theme_hook/content/archive/prepend
-- `your_theme_slug`/theme_hook/content/archive/append
+* `your_theme_slug`/theme_hook/content/prepend
+* `your_theme_slug`/theme_hook/content/append
+* `your_theme_slug`/theme_hook/content/index/prepend
+* `your_theme_slug`/theme_hook/content/index/append
+* `your_theme_slug`/theme_hook/content/page/prepend
+* `your_theme_slug`/theme_hook/content/page/append
+* `your_theme_slug`/theme_hook/content/archive/prepend
+* `your_theme_slug`/theme_hook/content/archive/append
 
 ### Entry
 
-- `your_theme_slug`/theme_hook/entry/meta/header
-- `your_theme_slug`/theme_hook/entry/post_thumbnail
-- `your_theme_slug`/theme_hook/entry/meta/footer
+* `your_theme_slug`/theme_hook/entry/meta/header
+* `your_theme_slug`/theme_hook/entry/post_thumbnail
+* `your_theme_slug`/theme_hook/entry/meta/footer
 
 ## Theme Starter script
 
@@ -208,13 +217,13 @@ Theme Starter script generate your starter theme.
 
 Note: Run only once.
 
-```
+```shell
 bin/setup.sh --theme 'Mytheme'
 ```
 
 ### Via npm
 
-```
+```shell
 npm run setup -- --theme 'Mytheme'
 ```
 
@@ -222,13 +231,13 @@ npm run setup -- --theme 'Mytheme'
 
 ### Build development environment
 
-```
+```shell
 npm install
 ```
 
-### Run script
+### Run npm script
 
-```
+```shell
 npm run <task>
 ```
 
@@ -253,7 +262,7 @@ npm run <task>
 * lint:css
 * lint:scss
 * lint:es
-* lint\:es\:fix
+* lint\\:es\\:fix
 * lint
 * stats:css
 * bs:server
@@ -272,13 +281,13 @@ npm run <task>
 
 ### Build testing environment
 
-```
+```shell
 composer install
 ```
 
-### Run script
+### Run composer script
 
-```
+```shell
 composer run <task>
 ```
 
@@ -314,67 +323,67 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ### [1.7.0] - 2020.05.14
 
-- replace array() to short array syntax []
+* replace array() to short array syntax []
 
 ### [1.6.0] - 2020.04.23
 
-- fix css header
-- fix npm scripts
-- fix setup.sh
-- move test case directory
-- bump up phpunit version 7.x
-- add version number with zip archive
+* fix css header
+* fix npm scripts
+* fix setup.sh
+* move test case directory
+* bump up phpunit version 7.x
+* add version number with zip archive
 
 ### [1.5.0] - 2020.03.24
 
-- move template parts files to page-header dir
-- add non minified javascript files for theme review
-- change javascript files bundle from webpack to minify
-- move javascript files	to src/javascript/main directory
-- exclude node_modules in test scope
-- remove README.md in zip archive
+* move template parts files to page-header dir
+* add non minified javascript files for theme review
+* change javascript files bundle from webpack to minify
+* move javascript files to src/javascript/main directory
+* exclude node_modules in test scope
+* remove README.md in zip archive
 
 ### [1.4.0] - 2019.11.19
 
-- fix Theme Starter script
-- add style-rtl.css
-- update .pot
-- fix Requires at least to 5.0
-- fix header image and logo image size
-- add archive script with npm script
+* fix Theme Starter script
+* add style-rtl.css
+* update .pot
+* fix Requires at least to 5.0
+* fix header image and logo image size
+* add archive script with npm script
 
 ### [1.3.0] - 2019.10.21
 
-- fix test case
-- bundle javascript files
-- add webpack, replace from uglify-es
-- move javascript files to src directory
-- fix error content
-- remove paginated with archive
+* fix test case
+* bundle javascript files
+* add webpack, replace from uglify-es
+* move javascript files to src directory
+* fix error content
+* remove paginated with archive
 
 ### [1.2.0] - 2019.09.30
 
-- add Class Editor
+* add Class Editor
 
 ### [1.1.2] - 2019.09.19
 
-- fix site-info
-- add editor-style.scss
+* fix site-info
+* add editor-style.scss
 
 ### [1.1.1] - 2019.07.30
 
-- replace from uglifyjs to uglify-es
-- fix header container
+* replace from uglifyjs to uglify-es
+* fix header container
 
 ### [1.1.0] - 2019.07.11
 
-- add Composer autoloader
-- add editor-style.css
-- add test case
+* add Composer autoloader
+* add editor-style.css
+* add test case
 
 ### [1.0.0] - 2019.05.19
 
-- initial release
+* initial release
 
 ## License
 
