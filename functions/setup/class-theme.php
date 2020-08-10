@@ -18,8 +18,8 @@ class Theme {
 
 	public function __construct() {
 		add_action( 'after_setup_theme', [ $this, 'setup' ] );
-		add_action( 'after_setup_theme', [ $this, 'content_width' ], 0 );
-		add_action( 'wp_head', [ $this, 'print_meta' ], 0 );
+		add_action( 'after_setup_theme', [ $this, 'content_width' ] );
+		add_action( 'wp_head', [ $this, 'print_meta' ], 1 );
 	}
 
 	/**
