@@ -14,12 +14,11 @@ trim_trailing_whitespace = true
 indent_style = tab
 indent_size = 2
 
-[{package.json,*.yml}]
+[*.{js, json, yml, xml}]
 indent_style = space
 
-[composer.json]
-indent_style = space
-indent_size = 4
+[*.md]
+trim_trailing_whitespace = false
 
-[*.js]
-indent_style = space
+[readme.txt]
+trim_trailing_whitespace = false
