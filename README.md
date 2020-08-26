@@ -321,6 +321,12 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.9.0] - 2020.08.26
+
+* fix webpack.config.js, generate compressed and uncompressed files
+* fix npm scripts
+* update package.json
+
 ### [1.8.0] - 2020.08.10
 
 * update package.json
