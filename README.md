@@ -318,6 +318,12 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+### [1.9.0] - 2020.08.27
+
+* imporve code with phpcs, phpmd and phpstan
+* update testunit configuration
+* fix composer.json
+
 ### [1.9.0] - 2020.08.26
 
 * fix webpack.config.js, generate compressed and uncompressed files
