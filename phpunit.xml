@@ -1,15 +1,24 @@
 <?xml version="1.0"?>
 <phpunit
-	bootstrap="tests/phpunit/bootstrap.php"
-	backupGlobals="false"
-	colors="true"
-	convertErrorsToExceptions="true"
-	convertNoticesToExceptions="true"
-	convertWarningsToExceptions="true"
-	>
-	<testsuites>
-		<testsuite>
-			<directory prefix="test-" suffix=".php">./tests/</directory>
-		</testsuite>
-	</testsuites>
+  bootstrap="tests/phpunit/bootstrap.php"
+  backupGlobals="false"
+  colors="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  >
+  <testsuites>
+    <testsuite name="default">
+      <directory prefix="test-" suffix=".php">./tests/</directory>
+    </testsuite>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <file>./index.php</file>
+      <directory suffix=".php">./archive-templates</directory>
+      <directory suffix=".php">./functions</directory>
+      <directory suffix=".php">./page-templates</directory>
+      <directory suffix=".php">./templates</directory>
+    </whitelist>
+  </filter>
+  </testsuites>
 </phpunit>
