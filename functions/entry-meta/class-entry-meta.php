@@ -43,7 +43,8 @@ class Entry_Meta {
 			$time_string
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span> '; // WPCS: XSS OK.
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="posted-on">' . $posted_on . '</span> ';
 	}
 
 	public static function modified_on() {
@@ -70,17 +71,20 @@ class Entry_Meta {
 			$time_string
 		);
 
-		echo '<span class="modified-on">' . $modified_on . '</span> '; // WPCS: XSS OK.
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="modified-on">' . $modified_on . '</span> ';
 	}
 
 	public static function posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'wp-theme-boilerplate' ),
+			/* @phpstan-ignore-next-line */
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span> '; // WPCS: XSS OK.
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="byline"> ' . $byline . '</span> ';
 	}
 
 	public static function entry_footer() {
@@ -90,7 +94,7 @@ class Entry_Meta {
 			$categories_list = get_the_category_list( esc_html__( ', ', 'wp-theme-boilerplate' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp-theme-boilerplate' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp-theme-boilerplate' ) . '</span>', $categories_list );  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo ' ';
 			}
 
@@ -98,7 +102,7 @@ class Entry_Meta {
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'wp-theme-boilerplate' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wp-theme-boilerplate' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wp-theme-boilerplate' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo ' ';
 			}
 		}

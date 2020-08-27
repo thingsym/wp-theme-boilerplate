@@ -252,17 +252,14 @@ npm run <task>
 * sass:block-editor
 * rtlcss:rtl
 * webpack
-* terser:js
-* concat:js
 * build:css
 * build:js
-* build:js:deprecated
 * build:i18n
 * build
 * lint:css
 * lint:scss
 * lint:es
-* lint\\:es\\:fix
+* lint:\es:fix
 * lint
 * stats:css
 * bs:server
@@ -320,6 +317,12 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 5. Create new Pull Request
 
 ## Changelog
+
+### [1.9.0] - 2020.08.27
+
+* imporve code with phpcs, phpmd and phpstan
+* update testunit configuration
+* fix composer.json
 
 ### [1.9.0] - 2020.08.26
 

@@ -14,6 +14,14 @@ namespace WP_Theme_Boilerplate\Functions\Template;
  * @since 1.0.0
  */
 class Template {
+
+	/**
+	 * Protected value.
+	 *
+	 * @access protected
+	 *
+	 * @var string $templates_dir
+	 */
 	protected $templates_dir = 'templates/';
 
 	public function __construct() {

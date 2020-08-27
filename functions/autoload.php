@@ -16,7 +16,8 @@
  * @param string $class The fully-qualified class name.
  * @return void
  */
-spl_autoload_register(
+
+spl_autoload_register( // @phpstan-ignore-line
 	function( $class ) {
 		/* theme-specific namespace prefix */
 		$prefix = 'WP_Theme_Boilerplate\\';
