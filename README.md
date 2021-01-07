@@ -318,7 +318,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
-### [1.9.0] - 2020.08.27
+### [2.1.0] - 2021.01.07
+
+* replace scss from node-sass to dart-sass
+* fix npm scripts for dart-sass
+* add dart-sass
+* update node package
+* add GitHub actions, remove .travis.yml
+
+### [2.0.0] - 2020.08.27
 
 * imporve code with phpcs, phpmd and phpstan
 * update testunit configuration
